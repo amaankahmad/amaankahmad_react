@@ -18,8 +18,12 @@ class SideMenu extends StatelessWidget {
     return Drawer(
       child: Column(
         children: [
-          MyInfo(),
           Expanded(
+            flex: 5,
+            child: MyInfo(),
+          ),
+          Expanded(
+            flex: 12,
             child: SingleChildScrollView(
               padding: EdgeInsets.all(defaultPadding),
               child: Column(

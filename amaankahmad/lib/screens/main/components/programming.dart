@@ -12,7 +12,8 @@ class Programming extends StatelessWidget {
       children: [
         Divider(),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+          padding: const EdgeInsets.only(
+              top: defaultPadding / 2, bottom: defaultPadding),
           child: Text(
             "Programming",
             style: Theme.of(context).textTheme.subtitle2,

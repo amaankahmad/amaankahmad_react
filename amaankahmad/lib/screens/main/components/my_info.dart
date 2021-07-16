@@ -14,16 +14,21 @@ class MyInfo extends StatelessWidget {
         child: Column(
           children: [
             Spacer(
-              flex: 2,
+              flex: 4,
             ),
             CircleAvatar(
               radius: 70,
               backgroundImage: AssetImage("assets/images/Amaan Ahmad.jpg"),
             ),
-            Spacer(),
+            Spacer(
+              flex: 3,
+            ),
             Text(
               "Amaan Ahmad",
               style: Theme.of(context).textTheme.subtitle2,
+            ),
+            Spacer(
+              flex: 1,
             ),
             Text(
               "RAEng, IET and Southwark Scholar studying\nComputational Biomedical Engineering\nat Imperial College London",
@@ -31,7 +36,7 @@ class MyInfo extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             Spacer(
-              flex: 2,
+              flex: 4,
             ),
           ],
         ),
