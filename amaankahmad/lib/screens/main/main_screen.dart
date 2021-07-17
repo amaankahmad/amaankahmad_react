@@ -22,12 +22,10 @@ class MainScreen extends StatelessWidget {
               ),
               Expanded(
                 flex: 7,
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      ...children, // our footer
-                    ],
-                  ),
+                child: Column(
+                  children: [
+                    ...children, // our footer
+                  ],
                 ),
               ),
             ],

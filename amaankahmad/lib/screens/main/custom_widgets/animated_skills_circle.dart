@@ -15,7 +15,7 @@ class AnimatedSkillsCircle extends StatelessWidget {
       aspectRatio: 1,
       child: TweenAnimationBuilder(
         tween: Tween<double>(begin: 0, end: 1),
-        duration: defaultDuration,
+        duration: Duration(milliseconds: 2000),
         builder: (context, double value, child) => Stack(
           fit: StackFit.expand,
           children: [

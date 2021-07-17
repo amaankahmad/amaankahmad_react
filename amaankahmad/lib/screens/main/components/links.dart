@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_profile/screens/main/custom_widgets/hover_button.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -19,41 +20,69 @@ class Links extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          IconButton(
-            onPressed: () {
-              openURL("https://www.linkedin.com/in/amaankahmad/");
+          HoverButton(
+            builder: (isHovering) {
+              final color = isHovering ? Colors.green[300] : Colors.grey;
+              // final iconSize = isHovering ? 35.0 : 30.0;
+              return IconButton(
+                // iconSize: iconSize,
+                onPressed: () {
+                  openURL("https://www.linkedin.com/in/amaankahmad/");
+                },
+                icon: SvgPicture.asset(
+                  "assets/icons/linkedin.svg",
+                  color: color,
+                ),
+              );
             },
-            icon: SvgPicture.asset(
-              "assets/icons/linkedin.svg",
-              color: Colors.grey,
-            ),
           ),
-          IconButton(
-            onPressed: () {
-              openURL("mailto:amaankahmad@gmail.com");
+          HoverButton(
+            builder: (isHovering) {
+              final color = isHovering ? Colors.green[300] : Colors.grey;
+              // final iconSize = isHovering ? 30.0 : 25.0;
+              return IconButton(
+                // iconSize: iconSize,
+                onPressed: () {
+                  openURL("mailto:amaankahmad@gmail.com");
+                },
+                icon: Icon(
+                  Icons.email,
+                  color: color,
+                ),
+              );
             },
-            icon: Icon(
-              Icons.email,
-              color: Colors.grey,
-            ),
           ),
-          IconButton(
-            onPressed: () {
-              openURL("https://github.com/amaankahmad");
+          HoverButton(
+            builder: (isHovering) {
+              final color = isHovering ? Colors.green[300] : Colors.grey;
+              // final iconSize = isHovering ? 35.0 : 30.0;
+              return IconButton(
+                // iconSize: iconSize,
+                onPressed: () {
+                  openURL("https://github.com/amaankahmad");
+                },
+                icon: SvgPicture.asset(
+                  "assets/icons/github.svg",
+                  color: color,
+                ),
+              );
             },
-            icon: SvgPicture.asset(
-              "assets/icons/github.svg",
-              color: Colors.grey,
-            ),
           ),
-          IconButton(
-            onPressed: () {
-              openURL("https://www.facebook.com/amaan.ahmad.71697");
+          HoverButton(
+            builder: (isHovering) {
+              final color = isHovering ? Colors.green[300] : Colors.grey;
+              // final iconSize = isHovering ? 30.0 : 25.0;
+              return IconButton(
+                // iconSize: iconSize,
+                onPressed: () {
+                  openURL("https://www.facebook.com/amaan.ahmad.71697");
+                },
+                icon: Icon(
+                  Icons.facebook,
+                  color: color,
+                ),
+              );
             },
-            icon: Icon(
-              Icons.facebook,
-              color: Colors.grey,
-            ),
           ),
         ],
       ),

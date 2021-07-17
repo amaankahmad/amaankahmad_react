@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
-import 'package:flutter_profile/screens/main/components/animated_programming_line.dart';
+import 'package:flutter_profile/screens/main/custom_widgets/animated_programming_line.dart';
 
 class Programming extends StatelessWidget {
   const Programming({Key? key}) : super(key: key);

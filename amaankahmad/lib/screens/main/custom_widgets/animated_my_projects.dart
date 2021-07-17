@@ -41,7 +41,7 @@ class AnimatedMyProjects extends StatelessWidget {
             TyperAnimatedText("an electronic stethescope",
                 textStyle: TextStyle(color: Colors.green[300])),
             TyperAnimatedText(
-                "3 royal air force engineering innovative technologies",
+                "3 Royal Air Force engineering innovative technologies",
                 textStyle: TextStyle(color: Colors.green[300]))
           ],
         ),

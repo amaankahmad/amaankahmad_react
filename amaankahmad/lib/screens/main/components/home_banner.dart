@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
-import 'package:flutter_profile/screens/main/components/animated_my_projects.dart';
+import 'package:flutter_profile/screens/main/custom_widgets/animated_my_projects.dart';
 import 'package:flutter_profile/screens/main/components/links.dart';
+import 'package:flutter_profile/screens/main/custom_widgets/nav_button.dart';
 
-class HomeBanner extends StatelessWidget {
+class HomeBanner extends StatefulWidget {
   const HomeBanner({
     Key? key,
   }) : super(key: key);
 
+  @override
+  _HomeBannerState createState() => _HomeBannerState();
+}
+
+class _HomeBannerState extends State<HomeBanner> {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -62,9 +68,12 @@ class HomeBanner extends StatelessWidget {
                   ],
                 ),
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Links(),
+                    NavButton(sectionName: "About Me"),
+                    NavButton(sectionName: "My Projects"),
+                    NavButton(sectionName: "Hobbies"),
                   ],
                 ),
               ],
