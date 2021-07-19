@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
 import 'package:flutter_profile/screens/main/custom_widgets/animated_my_projects.dart';
 import 'package:flutter_profile/screens/main/components/links.dart';
+import 'package:flutter_profile/screens/main/custom_widgets/explore_button.dart';
+import 'package:flutter_profile/screens/main/custom_widgets/hover_button.dart';
 import 'package:flutter_profile/screens/main/custom_widgets/nav_button.dart';
 
 class HomeBanner extends StatefulWidget {
@@ -51,20 +53,7 @@ class _HomeBannerState extends State<HomeBanner> {
                     SizedBox(
                       height: defaultPadding,
                     ),
-                    ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "EXPLORE MORE",
-                        style: TextStyle(
-                            color: darkColor, fontWeight: FontWeight.bold),
-                      ),
-                      style: TextButton.styleFrom(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: defaultPadding * 2,
-                            vertical: defaultPadding),
-                        backgroundColor: Colors.green[300],
-                      ),
-                    ),
+                    ExploreButton(),
                   ],
                 ),
                 Column(

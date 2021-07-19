@@ -2,19 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
 import 'package:flutter_profile/screens/main/custom_widgets/hover_button.dart';
 
-class NavButton extends StatefulWidget {
-  const NavButton({
+class ExploreButton extends StatelessWidget {
+  const ExploreButton({
     Key? key,
-    required this.sectionName,
   }) : super(key: key);
 
-  final String sectionName;
-
-  @override
-  _NavButtonState createState() => _NavButtonState();
-}
-
-class _NavButtonState extends State<NavButton> {
   @override
   Widget build(BuildContext context) {
     return HoverButton(builder: (isHovering) {
@@ -22,8 +14,8 @@ class _NavButtonState extends State<NavButton> {
       final screenWidth = MediaQuery.of(context).size.width;
       final bgColor = isHovering ? Colors.blue : Colors.green[300];
       final textColor = isHovering ? Colors.white : darkColor;
-      final fWeight = isHovering ? FontWeight.w900 : FontWeight.bold;
-      final sizeWidth = isHovering ? screenWidth * 0.08 : screenWidth * 0.075;
+      final fWeight = isHovering ? FontWeight.w900 : FontWeight.w900;
+      final sizeWidth = screenWidth * 0.09;
       final sizeHeight =
           isHovering ? screenHeight * 0.045 : screenHeight * 0.04;
       final fSize = isHovering ? 13.0 : 12.0;
@@ -33,7 +25,7 @@ class _NavButtonState extends State<NavButton> {
           width: sizeWidth,
           height: sizeHeight,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(3),
             color: bgColor,
           ),
           child: Padding(
@@ -41,9 +33,8 @@ class _NavButtonState extends State<NavButton> {
                 const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
             child: Center(
               child: Text(
-                widget.sectionName,
-                style: TextStyle(
-                    color: textColor, fontSize: fSize, fontWeight: fWeight),
+                "EXPLORE MORE",
+                style: TextStyle(color: textColor, fontWeight: fWeight),
               ),
             ),
           ),

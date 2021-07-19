@@ -15,7 +15,11 @@ class HomeScreen extends StatelessWidget {
         HomeBanner(),
         SingleChildScrollView(
           child: Column(
-            children: [AboutMe(), MyProjects(), Hobbies()],
+            children: [
+              AboutMe(),
+              MyProjects(),
+              Hobbies(),
+            ],
           ),
         )
       ],

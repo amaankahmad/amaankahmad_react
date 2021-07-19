@@ -67,7 +67,7 @@ class Skills extends StatelessWidget {
             ),
             Expanded(
               child: AnimatedSkillsCircle(
-                skillName: "AWS",
+                skillName: "Robotics",
               ),
             ),
           ],
