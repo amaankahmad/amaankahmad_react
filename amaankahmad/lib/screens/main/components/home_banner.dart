@@ -18,6 +18,8 @@ class HomeBanner extends StatefulWidget {
 class _HomeBannerState extends State<HomeBanner> {
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return AspectRatio(
       aspectRatio: 3,
       child: Stack(
@@ -54,6 +56,23 @@ class _HomeBannerState extends State<HomeBanner> {
                       height: defaultPadding,
                     ),
                     ExploreButton(),
+                    SizedBox(
+                      height: screenHeight * 0.025,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          width: screenWidth * 0.05,
+                          child: Image.asset(
+                              "assets/images/Imperial College London Logo.png"),
+                        ),
+                        Container(
+                          width: screenWidth * 0.125,
+                          child: Image.asset(
+                              "assets/images/SPS_logo_transparent.png"),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
                 Column(
@@ -61,8 +80,11 @@ class _HomeBannerState extends State<HomeBanner> {
                   children: [
                     Links(),
                     NavButton(sectionName: "About Me"),
+                    NavButton(sectionName: "Experience"),
                     NavButton(sectionName: "My Projects"),
-                    NavButton(sectionName: "Hobbies"),
+                    NavButton(sectionName: "Awards"),
+                    NavButton(sectionName: "My Hobbies"),
+                    NavButton(sectionName: "Contact"),
                   ],
                 ),
               ],

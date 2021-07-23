@@ -22,7 +22,7 @@ class Links extends StatelessWidget {
         children: [
           HoverButton(
             builder: (isHovering) {
-              final color = isHovering ? Colors.green[300] : Colors.grey;
+              final color = isHovering ? Colors.greenAccent : Colors.grey;
               // final iconSize = isHovering ? 35.0 : 30.0;
               return IconButton(
                 // iconSize: iconSize,

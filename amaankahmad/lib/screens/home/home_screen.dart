@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/screens/main/components/about_me.dart';
+import 'package:flutter_profile/screens/main/components/experience.dart';
 import 'package:flutter_profile/screens/main/components/hobbies.dart';
 import 'package:flutter_profile/screens/main/components/home_banner.dart';
 import 'package:flutter_profile/screens/main/components/my_projects.dart';
@@ -10,16 +11,23 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return MainScreen(
       children: [
-        HomeBanner(),
-        SingleChildScrollView(
-          child: Column(
-            children: [
-              AboutMe(),
-              MyProjects(),
-              Hobbies(),
-            ],
+        Container(child: HomeBanner()),
+        Container(
+          height: screenHeight * 0.6,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                AboutMe(),
+                Experience(),
+                MyProjects(),
+                Hobbies(),
+              ],
+            ),
           ),
         )
       ],

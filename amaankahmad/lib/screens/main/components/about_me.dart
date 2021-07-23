@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
+import 'package:flutter_profile/screens/main/custom_widgets/hover_button.dart';
 
 class AboutMe extends StatelessWidget {
   const AboutMe({Key? key}) : super(key: key);
@@ -11,38 +12,49 @@ class AboutMe extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
-    return Padding(
-      padding: const EdgeInsets.only(top: defaultPadding * 2),
+    return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(screenHeight * 0.04),
-            child: Image.asset(
-              "assets/images/me.jpg",
-              width: screenHeight * 0.4,
+          Padding(
+            padding: const EdgeInsets.only(top: defaultPadding * 2),
+            child: HoverButton(
+              builder: (isHovering) {
+                final screenHeight = MediaQuery.of(context).size.height;
+                final screenWidth = MediaQuery.of(context).size.width;
+                final size =
+                    isHovering ? screenHeight * 0.41 : screenHeight * 0.4;
+                return ClipRRect(
+                  borderRadius: BorderRadius.circular(screenHeight * 0.04),
+                  child: Image.asset("assets/images/me.jpg", width: size),
+                );
+              },
             ),
-          ), // Photo of me
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                child: Text(
-                  "Welcome!",
-                  style: TextStyle(color: Colors.green[300], fontSize: 48),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: defaultPadding * 2),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  child: Text(
+                    "Welcome!",
+                    style: TextStyle(color: Colors.greenAccent, fontSize: 48),
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: screenHeight * 0.015,
-              ),
-              Container(
-                width: screenWidth * 0.3,
-                child: Text(
-                  introduction,
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                SizedBox(
+                  height: screenHeight * 0.015,
                 ),
-              ),
-            ],
+                Container(
+                  width: screenWidth * 0.3,
+                  child: Text(
+                    introduction,
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

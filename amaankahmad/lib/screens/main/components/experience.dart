@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
 
-class MyProjects extends StatelessWidget {
-  const MyProjects({Key? key}) : super(key: key);
+class Experience extends StatelessWidget {
+  const Experience({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     return Padding(
-      padding: const EdgeInsets.only(top: defaultPadding * 2),
+      padding: const EdgeInsets.symmetric(
+          horizontal: defaultPadding * 4, vertical: defaultPadding * 2),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
+          Align(
+            alignment: Alignment.topLeft,
             child: Text(
-              "My Projects",
+              "Experience:",
               style: TextStyle(color: Colors.greenAccent, fontSize: 48),
-              textAlign: TextAlign.start,
             ),
           ),
         ],
