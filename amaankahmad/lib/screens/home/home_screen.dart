@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/screens/main/components/about_me.dart';
+import 'package:flutter_profile/screens/main/components/awards.dart';
+import 'package:flutter_profile/screens/main/components/contact.dart';
 import 'package:flutter_profile/screens/main/components/experience.dart';
 import 'package:flutter_profile/screens/main/components/hobbies.dart';
 import 'package:flutter_profile/screens/main/components/home_banner.dart';
+import 'package:flutter_profile/screens/main/components/independant_learning.dart';
 import 'package:flutter_profile/screens/main/components/my_projects.dart';
+import 'package:flutter_profile/screens/main/components/navbar.dart';
 import 'package:flutter_profile/screens/main/main_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,21 +19,31 @@ class HomeScreen extends StatelessWidget {
     final screenHeight = MediaQuery.of(context).size.height;
     return MainScreen(
       children: [
-        Container(child: HomeBanner()),
         Container(
-          height: screenHeight * 0.6,
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                AboutMe(),
-                Experience(),
-                MyProjects(),
-                Hobbies(),
-              ],
-            ),
+          child: Stack(
+            children: [
+              Container(
+                height: screenHeight,
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      HomeBanner(),
+                      AboutMe(),
+                      Experience(),
+                      MyProjects(),
+                      IndependantLearning(),
+                      Awards(),
+                      Hobbies(),
+                      Contact(),
+                    ],
+                  ),
+                ),
+              ),
+              NavBar(),
+            ],
           ),
-        )
+        ),
       ],
     );
   }

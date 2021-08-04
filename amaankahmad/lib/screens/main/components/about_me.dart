@@ -18,21 +18,14 @@ class AboutMe extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(top: defaultPadding * 2),
-            child: HoverButton(
-              builder: (isHovering) {
-                final screenHeight = MediaQuery.of(context).size.height;
-                final screenWidth = MediaQuery.of(context).size.width;
-                final size =
-                    isHovering ? screenHeight * 0.41 : screenHeight * 0.4;
-                return ClipRRect(
-                  borderRadius: BorderRadius.circular(screenHeight * 0.04),
-                  child: Image.asset("assets/images/me.jpg", width: size),
-                );
-              },
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(screenHeight * 0.04),
+              child: Image.asset("assets/images/me.jpg",
+                  width: screenHeight * 0.4),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: defaultPadding * 2),
+            padding: const EdgeInsets.only(top: defaultPadding * 1.5),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,

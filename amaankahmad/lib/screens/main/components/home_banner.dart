@@ -44,12 +44,8 @@ class _HomeBannerState extends State<HomeBanner> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "Amaan Ahmad",
-                      style: Theme.of(context).textTheme.headline3!.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
+                    SizedBox(
+                      height: 72,
                     ),
                     MyProjectsAnimatedText(),
                     SizedBox(
@@ -59,32 +55,23 @@ class _HomeBannerState extends State<HomeBanner> {
                     SizedBox(
                       height: screenHeight * 0.025,
                     ),
-                    Row(
-                      children: [
-                        Container(
-                          width: screenWidth * 0.05,
-                          child: Image.asset(
-                              "assets/images/Imperial College London Logo.png"),
-                        ),
-                        Container(
-                          width: screenWidth * 0.125,
-                          child: Image.asset(
-                              "assets/images/SPS_logo_transparent.png"),
-                        ),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.only(left: defaultPadding / 2),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: screenWidth * 0.05,
+                            child: Image.asset(
+                                "assets/images/Imperial College London Logo.png"),
+                          ),
+                          Container(
+                            width: screenWidth * 0.125,
+                            child: Image.asset(
+                                "assets/images/SPS_logo_transparent.png"),
+                          ),
+                        ],
+                      ),
                     ),
-                  ],
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Links(),
-                    NavButton(sectionName: "About Me"),
-                    NavButton(sectionName: "Experience"),
-                    NavButton(sectionName: "My Projects"),
-                    NavButton(sectionName: "Awards"),
-                    NavButton(sectionName: "My Hobbies"),
-                    NavButton(sectionName: "Contact"),
                   ],
                 ),
               ],

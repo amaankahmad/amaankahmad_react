@@ -24,10 +24,10 @@ class _NavButtonState extends State<NavButton> {
       final undThick = isHovering ? 3.0 : 2.0;
       final textColor = isHovering ? Colors.greenAccent : Colors.white70;
       final fWeight = isHovering ? FontWeight.w900 : FontWeight.bold;
-      final sizeWidth = isHovering ? screenWidth * 0.08 : screenWidth * 0.075;
+      final sizeWidth = isHovering ? screenWidth * 0.07 : screenWidth * 0.06;
       final sizeHeight =
           isHovering ? screenHeight * 0.045 : screenHeight * 0.04;
-      final fSize = isHovering ? 15.0 : 14.0;
+      final fSize = isHovering ? 14.0 : 13.0;
       return Padding(
         padding: const EdgeInsets.only(bottom: defaultPadding / 2),
         child: Container(
