@@ -33,9 +33,12 @@ class HomeScreen extends StatelessWidget {
                       Experience(),
                       MyProjects(),
                       IndependantLearning(),
-                      Awards(),
                       Hobbies(),
+                      Awards(),
                       Contact(),
+                      SizedBox(
+                        height: screenHeight * 0.05,
+                      ),
                     ],
                   ),
                 ),

@@ -117,7 +117,10 @@ class CardDetail extends StatelessWidget {
                                     ),
                           ),
                         ),
-                      )
+                      ),
+                    SizedBox(
+                      height: screenHeight * 0.025,
+                    ),
                   ],
                 ),
               ),

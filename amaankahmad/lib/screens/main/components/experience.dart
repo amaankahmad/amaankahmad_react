@@ -87,7 +87,7 @@ class Experience extends StatelessWidget {
             height: screenHeight * 0.05,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               PopUpCard(
                 tag: "citadel",
