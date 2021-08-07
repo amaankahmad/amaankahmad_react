@@ -19,10 +19,12 @@ class Programming extends StatelessWidget {
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
-        AnimatedProgrammingLine(percentage: 80, language: "Python"),
-        AnimatedProgrammingLine(percentage: 72, language: "Dart"),
-        AnimatedProgrammingLine(percentage: 60, language: "C/C++"),
+        AnimatedProgrammingLine(percentage: 85, language: "Python"),
+        AnimatedProgrammingLine(percentage: 75, language: "Dart"),
+        AnimatedProgrammingLine(percentage: 65, language: "C/C++"),
+        AnimatedProgrammingLine(percentage: 60, language: "Java"),
         AnimatedProgrammingLine(percentage: 60, language: "HTML and CSS"),
+        AnimatedProgrammingLine(percentage: 55, language: "Javascript"),
       ],
     );
   }

@@ -7,8 +7,6 @@ class IndependantLearning extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.only(
           left: defaultPadding * 4,
@@ -20,7 +18,7 @@ class IndependantLearning extends StatelessWidget {
           Align(
             alignment: Alignment.topLeft,
             child: Text(
-              "Independant Learning:",
+              "Independent Learning:",
               style: TextStyle(color: Colors.greenAccent, fontSize: 48),
             ),
           ),

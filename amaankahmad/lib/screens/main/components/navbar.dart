@@ -2,19 +2,44 @@ import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
 import 'package:flutter_profile/responsive.dart';
 import 'package:flutter_profile/screens/main/components/links.dart';
-import 'package:flutter_profile/screens/main/custom_widgets/explore_button.dart';
 import 'package:flutter_profile/screens/main/custom_widgets/hover_button.dart';
 import 'package:flutter_profile/screens/main/custom_widgets/nav_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class NavBar extends StatelessWidget {
-  const NavBar({Key? key}) : super(key: key);
+class NavBar extends StatefulWidget {
+  final Function() aboutMe;
+  final Function() experience;
+  final Function() awards;
+
+  NavBar(
+      {Key? key,
+      required this.aboutMe,
+      required this.experience,
+      required this.awards})
+      : super(key: key);
+
+  @override
+  _NavBarState createState() => _NavBarState(aboutMe, experience, awards);
+}
+
+class _NavBarState extends State<NavBar> {
+  final Function() aboutMe;
+  final Function() experience;
+  final Function() awards;
+
+  _NavBarState(this.aboutMe, this.experience, this.awards);
+  openURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw "Could not launch URL";
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
     return Container(
-      // color: Color(0xFF1A1E36),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [Color(0xFF1A1E36), Colors.transparent],
@@ -52,12 +77,34 @@ class NavBar extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        NavButton(sectionName: "About Me"),
-                        NavButton(sectionName: "Experience"),
-                        NavButton(sectionName: "Awards"),
+                        GestureDetector(
+                          onTap: aboutMe,
+                          child: NavButton(
+                            sectionName: "About Me",
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: experience,
+                          child: NavButton(
+                            sectionName: "Experience",
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: awards,
+                          child: NavButton(
+                            sectionName: "Awards",
+                          ),
+                        ),
                         // NavButton(sectionName: "Awards"),
                         // NavButton(sectionName: "My Hobbies"),
-                        NavButton(sectionName: "Contact"),
+                        GestureDetector(
+                          onTap: () {
+                            openURL("mailto:amaankahmad@gmail.com");
+                          },
+                          child: NavButton(
+                            sectionName: "Contact",
+                          ),
+                        ),
                         if (screenWidth > 1310)
                           Padding(
                             padding: const EdgeInsets.only(

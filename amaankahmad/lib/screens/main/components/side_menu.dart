@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
-import 'package:flutter_profile/screens/main/components/area_info_text.dart';
 import 'package:flutter_profile/screens/main/components/links.dart';
 import 'package:flutter_profile/screens/main/components/my_info.dart';
 import 'package:flutter_profile/screens/main/components/programming.dart';
 import 'package:flutter_profile/screens/main/components/skills.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({
@@ -28,14 +25,14 @@ class SideMenu extends StatelessWidget {
               padding: EdgeInsets.all(defaultPadding),
               child: Column(
                 children: [
-                  AreaInfoText(
-                    title: "Location",
-                    text: "London, England",
-                  ),
-                  AreaInfoText(
-                    title: "Age",
-                    text: "20",
-                  ),
+                  // AreaInfoText(
+                  //   title: "Location",
+                  //   text: "London, England",
+                  // ),
+                  // AreaInfoText(
+                  //   title: "Age",
+                  //   text: "20",
+                  // ),
                   Skills(),
                   Programming(),
                   Links(),

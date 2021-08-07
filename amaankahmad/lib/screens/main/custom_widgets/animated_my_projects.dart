@@ -24,7 +24,7 @@ class AnimatedMyProjects extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text("My Projects: "),
+        Text("I've built: "),
         AnimatedTextKit(
           repeatForever: true,
           animatedTexts: [

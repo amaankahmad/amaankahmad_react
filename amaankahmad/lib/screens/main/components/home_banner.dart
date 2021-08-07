@@ -2,25 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
 import 'package:flutter_profile/responsive.dart';
 import 'package:flutter_profile/screens/main/custom_widgets/animated_my_projects.dart';
-import 'package:flutter_profile/screens/main/components/links.dart';
 import 'package:flutter_profile/screens/main/custom_widgets/explore_button.dart';
-import 'package:flutter_profile/screens/main/custom_widgets/hover_button.dart';
-import 'package:flutter_profile/screens/main/custom_widgets/nav_button.dart';
 
 class HomeBanner extends StatefulWidget {
+  final Function() buttonPressed;
+
   const HomeBanner({
     Key? key,
+    required this.buttonPressed,
   }) : super(key: key);
 
   @override
-  _HomeBannerState createState() => _HomeBannerState();
+  _HomeBannerState createState() => _HomeBannerState(buttonPressed);
 }
 
 class _HomeBannerState extends State<HomeBanner> {
+  final Function() buttonPressed;
+
+  _HomeBannerState(this.buttonPressed);
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
     return AspectRatio(
       aspectRatio: 3,
       child: Stack(
@@ -54,7 +56,10 @@ class _HomeBannerState extends State<HomeBanner> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           if (screenWidth > 600) MyProjectsAnimatedText(),
-                          if (screenWidth > 600) ExploreButton(),
+                          if (screenWidth > 600)
+                            ExploreButton(
+                              onPressed: buttonPressed,
+                            ),
                           if (screenWidth > 600)
                             Padding(
                               padding: const EdgeInsets.only(

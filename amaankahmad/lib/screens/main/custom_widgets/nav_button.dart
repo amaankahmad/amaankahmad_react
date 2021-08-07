@@ -32,29 +32,31 @@ class _NavButtonState extends State<NavButton> {
       final fSize = isHovering ? 14.0 : 13.0;
       return Padding(
         padding: const EdgeInsets.only(bottom: defaultPadding / 2),
-        child: Container(
-          width: sizeWidth,
-          height: sizeHeight,
-          decoration: BoxDecoration(
-            border: Border(
-              bottom: BorderSide(
-                color: undColor,
-                width: undThick,
+        child: GestureDetector(
+          child: Container(
+            width: sizeWidth,
+            height: sizeHeight,
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: undColor,
+                  width: undThick,
+                ),
               ),
+              // borderRadius: BorderRadius.circular(10),
+              // color: bgColor,
             ),
-            // borderRadius: BorderRadius.circular(10),
-            // color: bgColor,
-          ),
-          child: Padding(
-            padding:
-                const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
-            child: Center(
-              child: Text(
-                widget.sectionName,
-                style: TextStyle(
-                  color: textColor,
-                  fontSize: fSize,
-                  fontWeight: fWeight,
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
+              child: Center(
+                child: Text(
+                  widget.sectionName,
+                  style: TextStyle(
+                    color: textColor,
+                    fontSize: fSize,
+                    fontWeight: fWeight,
+                  ),
                 ),
               ),
             ),

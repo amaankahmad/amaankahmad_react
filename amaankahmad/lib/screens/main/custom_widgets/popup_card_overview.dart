@@ -27,7 +27,7 @@ class CardOverview extends StatelessWidget {
     return Hero(
       tag: tag,
       child: Container(
-        width: screenWidth * 0.2,
+        width: (screenWidth > 700) ? screenWidth * 0.2 : screenWidth * 0.3,
         decoration: BoxDecoration(
             color: Color(0xFF1A1E36),
             borderRadius: BorderRadius.all(Radius.circular(20))),
