@@ -33,8 +33,8 @@ class MyProjects extends StatelessWidget {
             children: [
               PopUpCard(
                 tag: "pathfinder",
-                imagePath: "assets/images/ocado-logo.png",
-                imagePathExt: "assets/images/ocado-arm.jpg",
+                imagePath: "assets/images/pathfinder/react.png",
+                imagePathExt: "assets/images/pathfinder/stock.jpeg",
                 experienceTitle: "PathFinder",
                 experienceSubtitle: "-1",
                 experienceRole: "Project and Software Lead",
@@ -48,8 +48,8 @@ class MyProjects extends StatelessWidget {
               ),
               PopUpCard(
                 tag: "kalliston",
-                imagePath: "assets/images/ocado-logo.png",
-                imagePathExt: "assets/images/ocado-arm.jpg",
+                imagePath: "assets/images/kalliston/logo.jpeg",
+                imagePathExt: "assets/images/kalliston/app.png",
                 experienceTitle: "KALLISTON",
                 experienceSubtitle: "-1",
                 experienceRole: "Founder and Project Lead",
@@ -65,12 +65,12 @@ class MyProjects extends StatelessWidget {
               ),
               PopUpCard(
                 tag: "bankingGUI",
-                imagePath: "assets/images/ocado-logo.png",
-                imagePathExt: "assets/images/ocado-arm.jpg",
+                imagePath: "assets/images/bankingGUI/login.png",
+                imagePathExt: "assets/images/bankingGUI/functions.png",
                 experienceTitle: "Banking App",
                 experienceSubtitle: "-1",
                 experienceRole: "Personal Project",
-                experienceRoleExt: "Software and Robotics Engineer Intern",
+                experienceRoleExt: "Personal Project",
                 experienceDates: "Aug. 2020 - Sep. 2020",
                 description: [
                   "Developed and designed a custom graphical user interface (GUI) using Tkinter.",
@@ -84,16 +84,16 @@ class MyProjects extends StatelessWidget {
             height: screenHeight * 0.05,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               PopUpCard(
                 tag: "ichealthhack",
-                imagePath: "assets/images/ocado-logo.png",
-                imagePathExt: "assets/images/ocado-arm.jpg",
+                imagePath: "assets/images/ichealthhack/logo.png",
+                imagePathExt: "assets/images/ichealthhack/wearable.JPG",
                 experienceTitle: "ICHealthHack20",
                 experienceSubtitle: "Hackathon",
                 experienceRole: "Project and Software Lead",
-                experienceRoleExt: "Spring Intern",
+                experienceRoleExt: "Project and Software Lead",
                 experienceDates: "Mar. 2020",
                 description: [
                   "Led a team of a prototype vest, using Arduino, that monitored the posture of athletes during training.",
@@ -102,8 +102,8 @@ class MyProjects extends StatelessWidget {
               ),
               PopUpCard(
                 tag: "raf",
-                imagePath: "assets/images/ocado-logo.png",
-                imagePathExt: "assets/images/ocado-arm.jpg",
+                imagePath: "assets/images/raf/logo.jpeg",
+                imagePathExt: "assets/images/raf/Chief.jpg",
                 experienceTitle: "RAF Aerospace Competition",
                 experienceSubtitle: "Engineering Competition",
                 experienceRole: "Project Lead",
@@ -117,8 +117,8 @@ class MyProjects extends StatelessWidget {
               ),
               PopUpCard(
                 tag: "f24",
-                imagePath: "assets/images/ocado-logo.png",
-                imagePathExt: "assets/images/ocado-arm.jpg",
+                imagePath: "assets/images/f24/logo.png",
+                imagePathExt: "assets/images/f24/car.jpg",
                 experienceTitle: "Greenpower F24+",
                 experienceSubtitle: "Electric Racecar Competition",
                 experienceRole: "Engineer",

@@ -20,12 +20,14 @@ class CardOverview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
+    final screenWidth = (MediaQuery.of(context).size.width > 1440)
+        ? 1440
+        : MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     return Hero(
       tag: tag,
       child: Container(
-        width: screenWidth * 0.15,
+        width: screenWidth * 0.2,
         decoration: BoxDecoration(
             color: Color(0xFF1A1E36),
             borderRadius: BorderRadius.all(Radius.circular(20))),

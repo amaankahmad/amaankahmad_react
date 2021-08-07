@@ -23,16 +23,13 @@ class Skills extends StatelessWidget {
         ),
         Row(
           children: [
-            SizedBox(
-              width: defaultPadding * 1.5,
-            ),
             Expanded(
               child: AnimatedSkillsCircle(
                 skillName: "Flutter",
               ),
             ),
             SizedBox(
-              width: defaultPadding,
+              width: defaultPadding * 0.75,
             ),
             Expanded(
               child: AnimatedSkillsCircle(
@@ -40,7 +37,12 @@ class Skills extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: defaultPadding * 1.5,
+              width: defaultPadding * 0.75,
+            ),
+            Expanded(
+              child: AnimatedSkillsCircle(
+                skillName: "React",
+              ),
             ),
           ],
         ),
@@ -51,14 +53,6 @@ class Skills extends StatelessWidget {
           children: [
             Expanded(
               child: AnimatedSkillsCircle(
-                skillName: "Firebase",
-              ),
-            ),
-            SizedBox(
-              width: defaultPadding * 0.75,
-            ),
-            Expanded(
-              child: AnimatedSkillsCircle(
                 skillName: "Tensorflow",
               ),
             ),
@@ -67,7 +61,15 @@ class Skills extends StatelessWidget {
             ),
             Expanded(
               child: AnimatedSkillsCircle(
-                skillName: "Robotics",
+                skillName: "Firebase",
+              ),
+            ),
+            SizedBox(
+              width: defaultPadding * 0.75,
+            ),
+            Expanded(
+              child: AnimatedSkillsCircle(
+                skillName: "PyTorch",
               ),
             ),
           ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_profile/responsive.dart';
 import 'package:flutter_profile/screens/main/components/about_me.dart';
 import 'package:flutter_profile/screens/main/components/awards.dart';
 import 'package:flutter_profile/screens/main/components/contact.dart';
@@ -23,7 +24,9 @@ class HomeScreen extends StatelessWidget {
           child: Stack(
             children: [
               Container(
-                height: screenHeight,
+                height: Responsive.isDesktop(context)
+                    ? screenHeight
+                    : screenHeight - 56,
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,

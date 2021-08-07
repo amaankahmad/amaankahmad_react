@@ -38,7 +38,7 @@ class CustomListTile extends StatelessWidget {
                 width: defaultPadding,
               ),
               Expanded(
-                flex: 10,
+                flex: 6,
                 child: Container(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,

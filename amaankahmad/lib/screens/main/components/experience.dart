@@ -36,8 +36,8 @@ class Experience extends StatelessWidget {
             children: [
               PopUpCard(
                 tag: "ocado tech",
-                imagePath: "assets/images/ocado-logo.png",
-                imagePathExt: "assets/images/ocado-arm.jpg",
+                imagePath: "assets/images/ocado/ocado-logo.png",
+                imagePathExt: "assets/images/ocado/ocado-arm.jpg",
                 experienceTitle: "Ocado Technology",
                 experienceSubtitle: "New Concept Development Team",
                 experienceRole: "Software Intern",
@@ -52,8 +52,8 @@ class Experience extends StatelessWidget {
               ),
               PopUpCard(
                 tag: "e.quinox",
-                imagePath: "assets/images/ocado-logo.png",
-                imagePathExt: "assets/images/ocado-arm.jpg",
+                imagePath: "assets/images/equinox/square logo.jpeg",
+                imagePathExt: "assets/images/equinox/website.png",
                 experienceTitle: "E.quinox",
                 experienceSubtitle: "Greenweb",
                 experienceRole: "Project Lead",
@@ -66,8 +66,8 @@ class Experience extends StatelessWidget {
               ),
               PopUpCard(
                 tag: "melomotion",
-                imagePath: "assets/images/ocado-logo.png",
-                imagePathExt: "assets/images/ocado-arm.jpg",
+                imagePath: "assets/images/melomotion/logo.png",
+                imagePathExt: "assets/images/melomotion/app.png",
                 experienceTitle: "John Chilton School",
                 experienceSubtitle: "Melomotion Physiotherapy App",
                 experienceRole: "Project and Software Lead",
@@ -91,8 +91,8 @@ class Experience extends StatelessWidget {
             children: [
               PopUpCard(
                 tag: "citadel",
-                imagePath: "assets/images/ocado-logo.png",
-                imagePathExt: "assets/images/ocado-arm.jpg",
+                imagePath: "assets/images/citadel/logos.jpeg",
+                imagePathExt: "assets/images/citadel/day.png",
                 experienceTitle: "Citadel and Citdal Securities",
                 experienceSubtitle: "Discover Citadel Programme",
                 experienceRole: "Spring Intern",
@@ -105,8 +105,8 @@ class Experience extends StatelessWidget {
               ),
               PopUpCard(
                 tag: "snooker",
-                imagePath: "assets/images/ocado-logo.png",
-                imagePathExt: "assets/images/ocado-arm.jpg",
+                imagePath: "assets/images/snooker/detection.jpg",
+                imagePathExt: "assets/images/snooker/reshaped tracking.png",
                 experienceTitle: "Freelancing",
                 experienceSubtitle: "Billiard Telemetry",
                 experienceRole: "Software Engineer Intern",
@@ -120,8 +120,8 @@ class Experience extends StatelessWidget {
               ),
               PopUpCard(
                 tag: "5G",
-                imagePath: "assets/images/ocado-logo.png",
-                imagePathExt: "assets/images/ocado-arm.jpg",
+                imagePath: "assets/images/5G/logo.png",
+                imagePathExt: "assets/images/5G/robotic_surgery.jpeg",
                 experienceTitle: "King’s College London",
                 experienceSubtitle: "5G Robotic Surgery",
                 experienceRole: "Technology Intern",

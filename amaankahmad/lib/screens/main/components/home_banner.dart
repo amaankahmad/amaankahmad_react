@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
+import 'package:flutter_profile/responsive.dart';
 import 'package:flutter_profile/screens/main/custom_widgets/animated_my_projects.dart';
 import 'package:flutter_profile/screens/main/components/links.dart';
 import 'package:flutter_profile/screens/main/custom_widgets/explore_button.dart';
@@ -26,7 +27,7 @@ class _HomeBannerState extends State<HomeBanner> {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            "assets/images/Imperial.jpeg",
+            "assets/images/imperial/Imperial.jpeg",
             fit: BoxFit.cover,
           ),
           Container(
@@ -42,33 +43,37 @@ class _HomeBannerState extends State<HomeBanner> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(
-                      height: 72,
-                    ),
-                    MyProjectsAnimatedText(),
-                    SizedBox(
-                      height: defaultPadding,
-                    ),
-                    ExploreButton(),
-                    SizedBox(
-                      height: screenHeight * 0.025,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: defaultPadding / 2),
-                      child: Row(
+                    if (Responsive.isDesktop(context))
+                      SizedBox(
+                        height: 54,
+                      ),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Container(
-                            width: screenWidth * 0.05,
-                            child: Image.asset(
-                                "assets/images/Imperial College London Logo.png"),
-                          ),
-                          Container(
-                            width: screenWidth * 0.125,
-                            child: Image.asset(
-                                "assets/images/SPS_logo_transparent.png"),
-                          ),
+                          if (screenWidth > 600) MyProjectsAnimatedText(),
+                          if (screenWidth > 600) ExploreButton(),
+                          if (screenWidth > 600)
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  left: defaultPadding / 2),
+                              child: Row(
+                                children: [
+                                  Container(
+                                    width: screenWidth * 0.05,
+                                    child: Image.asset(
+                                        "assets/images/imperial/Imperial College London Logo.png"),
+                                  ),
+                                  Container(
+                                    width: screenWidth * 0.125,
+                                    child: Image.asset(
+                                        "assets/images/stpauls/SPS_logo_transparent.png"),
+                                  ),
+                                ],
+                              ),
+                            ),
                         ],
                       ),
                     ),

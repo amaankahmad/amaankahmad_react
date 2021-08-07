@@ -13,23 +13,65 @@ class AboutMe extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: defaultPadding * 2),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(screenHeight * 0.04),
-              child: Image.asset("assets/images/me.jpg",
-                  width: screenHeight * 0.4),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: defaultPadding * 1.5),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
+      child: (screenWidth > 1000)
+          ? Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                Expanded(
+                  flex: 1,
+                  child: Container(),
+                ),
+                Expanded(
+                  flex: 4,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: defaultPadding * 2),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(screenHeight * 0.04),
+                      child: Image.asset("assets/images/me/me.jpg",
+                          width: screenHeight * 0.4),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Container(),
+                ),
+                Expanded(
+                  flex: 6,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: defaultPadding * 1.5),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          child: Text(
+                            "Welcome!",
+                            style: TextStyle(
+                                color: Colors.greenAccent, fontSize: 48),
+                          ),
+                        ),
+                        SizedBox(
+                          height: screenHeight * 0.015,
+                        ),
+                        Container(
+                          width: screenWidth * 0.3,
+                          child: Text(
+                            introduction,
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            )
+          : Column(
+              children: [
+                SizedBox(
+                  height: screenHeight * 0.05,
+                ),
                 Container(
                   child: Text(
                     "Welcome!",
@@ -40,17 +82,19 @@ class AboutMe extends StatelessWidget {
                   height: screenHeight * 0.015,
                 ),
                 Container(
-                  width: screenWidth * 0.3,
+                  width: screenWidth * 0.8,
                   child: Text(
                     introduction,
                     style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(top: defaultPadding * 2),
+                  child: Image.asset("assets/images/me/me.jpg",
+                      width: screenWidth * 0.8),
+                ),
               ],
             ),
-          ),
-        ],
-      ),
     );
   }
 }

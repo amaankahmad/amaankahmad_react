@@ -49,7 +49,31 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/icons/
-    - assets/images/
+    - assets/images/5G/
+    - assets/images/bankingGUI/
+    - assets/images/citadel/
+    - assets/images/equinox/
+    - assets/images/f24/
+    - assets/images/goldman/
+    - assets/images/googleML/
+    - assets/images/harvard/
+    - assets/images/ichealthhack/
+    - assets/images/iet/
+    - assets/images/imperial/
+    - assets/images/jpmorgan/
+    - assets/images/kalliston/
+    - assets/images/me/
+    - assets/images/melomotion/
+    - assets/images/mit/
+    - assets/images/ocado/
+    - assets/images/pathfinder/
+    - assets/images/raeng/
+    - assets/images/raf/
+    - assets/images/SEC/
+    - assets/images/snooker/
+    - assets/images/southwark/
+    - assets/images/stpauls/
+    - assets/images/wharton/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
