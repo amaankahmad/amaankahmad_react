@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
 import 'package:flutter_profile/responsive.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_profile/screens/main/custom_widgets/link_button.dart';
 
-class CardDetail extends StatelessWidget {
+class CardDetail extends StatefulWidget {
   final String tag;
   final String imagePath;
   final String experienceTitle;
@@ -24,18 +24,42 @@ class CardDetail extends StatelessWidget {
       required this.link})
       : super(key: key);
 
-  openURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw "Could not launch URL";
-    }
-  }
+  @override
+  _CardDetailState createState() => _CardDetailState(
+      tag,
+      imagePath,
+      experienceTitle,
+      experienceSubtitle,
+      experienceRole,
+      experienceDates,
+      description,
+      link);
+}
 
+class _CardDetailState extends State<CardDetail> {
+  final String tag;
+  final String imagePath;
+  final String experienceTitle;
+  final String experienceSubtitle;
+  final String experienceRole;
+  final String experienceDates;
+  final List description;
+  final String link;
+
+  _CardDetailState(
+      this.tag,
+      this.imagePath,
+      this.experienceTitle,
+      this.experienceSubtitle,
+      this.experienceRole,
+      this.experienceDates,
+      this.description,
+      this.link);
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
+    precacheImage(AssetImage(widget.imagePath), context);
     return GestureDetector(
       onTap: () {
         Navigator.of(context).pop();
@@ -44,7 +68,7 @@ class CardDetail extends StatelessWidget {
         color: Colors.transparent,
         child: Center(
           child: Hero(
-            tag: tag,
+            tag: widget.tag,
             child: Container(
               width: (screenWidth > 560)
                   ? ((Responsive.isDesktop(context))
@@ -65,7 +89,7 @@ class CardDetail extends StatelessWidget {
                         padding: const EdgeInsets.only(
                             top: defaultPadding, bottom: defaultPadding / 2),
                         child: Image.asset(
-                          imagePath,
+                          widget.imagePath,
                           width: screenWidth * 0.3,
                         ),
                       ),
@@ -75,7 +99,7 @@ class CardDetail extends StatelessWidget {
                       height: screenWidth * 0.0025,
                     ),
                     Text(
-                      experienceTitle,
+                      widget.experienceTitle,
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.headline6!.copyWith(
                             fontSize: 28,
@@ -83,9 +107,9 @@ class CardDetail extends StatelessWidget {
                             color: Colors.white,
                           ),
                     ),
-                    if (experienceSubtitle != "-1")
+                    if (widget.experienceSubtitle != "-1")
                       Text(
-                        experienceSubtitle,
+                        widget.experienceSubtitle,
                         textAlign: TextAlign.center,
                         style: Theme.of(context).textTheme.headline6!.copyWith(
                               fontSize: 14,
@@ -94,7 +118,7 @@ class CardDetail extends StatelessWidget {
                             ),
                       ),
                     Text(
-                      experienceRole,
+                      widget.experienceRole,
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.headline6!.copyWith(
                             fontSize: 22,
@@ -103,7 +127,7 @@ class CardDetail extends StatelessWidget {
                           ),
                     ),
                     Text(
-                      experienceDates,
+                      widget.experienceDates,
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.headline6!.copyWith(
                             fontSize: 16,
@@ -120,14 +144,14 @@ class CardDetail extends StatelessWidget {
                     SizedBox(
                       height: screenWidth * 0.005,
                     ),
-                    for (int i = 0; i < description.length; i++)
+                    for (int i = 0; i < widget.description.length; i++)
                       Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: defaultPadding * 2, vertical: 4),
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            " • " + description[i],
+                            " • " + widget.description[i],
                             style:
                                 Theme.of(context).textTheme.headline6!.copyWith(
                                       fontSize: 14,
@@ -137,46 +161,10 @@ class CardDetail extends StatelessWidget {
                           ),
                         ),
                       ),
-                    // if (link != "")
-                    //   HoverButton(builder: (isHovering) {
-                    //     final bgColor =
-                    //         isHovering ? Colors.blue : Colors.green[300];
-                    //     final textColor = isHovering ? Colors.white : darkColor;
-                    //     final fWeight =
-                    //         isHovering ? FontWeight.w900 : FontWeight.w900;
-                    //     return Padding(
-                    //       padding: const EdgeInsets.only(bottom: 7.0),
-                    //       child: GestureDetector(
-                    //         // onPressed: openURL(link),
-                    //         child: Container(
-                    //           width: 135,
-                    //           height: 40,
-                    //           decoration: BoxDecoration(
-                    //             borderRadius: BorderRadius.circular(3),
-                    //             color: bgColor,
-                    //           ),
-                    //           child: Padding(
-                    //             padding: const EdgeInsets.symmetric(
-                    //                 horizontal: 12.0, vertical: 8.0),
-                    //             child: Center(
-                    //               child: Text(
-                    //                 "More",
-                    //                 style: TextStyle(
-                    //                     color: Colors.black, fontSize: 18),
-                    //               ),
-                    //               // child: Text(
-                    //               //   "Click Me",
-                    //               //   style: TextStyle(
-                    //               //       color: textColor,
-                    //               //       fontWeight: fWeight,
-                    //               //       fontSize: 18),
-                    //               // ),
-                    //             ),
-                    //           ),
-                    //         ),
-                    //       ),
-                    //     );
-                    //   }),
+                    if (link != "")
+                      LinkButton(
+                        link: link,
+                      ),
                     SizedBox(
                       height: screenHeight * 0.025,
                     ),

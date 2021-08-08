@@ -165,7 +165,7 @@ class MyProjects extends StatelessWidget {
                   : Column(
                       children: [
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             PopUpCard(
@@ -211,7 +211,7 @@ class MyProjects extends StatelessWidget {
                           height: screenHeight * 0.05,
                         ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             PopUpCard(
@@ -254,7 +254,7 @@ class MyProjects extends StatelessWidget {
                           height: screenHeight * 0.05,
                         ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             PopUpCard(

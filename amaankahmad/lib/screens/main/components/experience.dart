@@ -163,7 +163,7 @@ class Experience extends StatelessWidget {
                   : Column(
                       children: [
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             PopUpCard(
@@ -209,7 +209,7 @@ class Experience extends StatelessWidget {
                           height: screenHeight * 0.05,
                         ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             PopUpCard(
@@ -252,7 +252,7 @@ class Experience extends StatelessWidget {
                           height: screenHeight * 0.05,
                         ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             PopUpCard(

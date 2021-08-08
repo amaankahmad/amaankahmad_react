@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
 import 'package:flutter_profile/responsive.dart';
 
-class CardOverview extends StatelessWidget {
+class CardOverview extends StatefulWidget {
   final String tag;
   final String imagePath;
   final String experienceTitle;
@@ -20,13 +20,18 @@ class CardOverview extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  _CardOverviewState createState() => _CardOverviewState();
+}
+
+class _CardOverviewState extends State<CardOverview> {
+  @override
   Widget build(BuildContext context) {
     final screenWidth = (MediaQuery.of(context).size.width > 1440)
         ? 1440
         : MediaQuery.of(context).size.width;
     final screenHeight = MediaQuery.of(context).size.height;
     return Hero(
-      tag: tag,
+      tag: widget.tag,
       child: Container(
         width: (screenWidth > 560)
             ? ((Responsive.isDesktop(context))
@@ -39,7 +44,7 @@ class CardOverview extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(
-              imagePath,
+              widget.imagePath,
               height: screenHeight * 0.2,
               width: (screenWidth > 560)
                   ? ((screenWidth > 700)
@@ -49,7 +54,7 @@ class CardOverview extends StatelessWidget {
             ),
             Divider(),
             Text(
-              experienceTitle,
+              widget.experienceTitle,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headline6!.copyWith(
                     fontSize: 18,
@@ -57,9 +62,9 @@ class CardOverview extends StatelessWidget {
                     color: Colors.white,
                   ),
             ),
-            if (experienceSubtitle != "-1")
+            if (widget.experienceSubtitle != "-1")
               Text(
-                experienceSubtitle,
+                widget.experienceSubtitle,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.headline6!.copyWith(
                       fontSize: 14,
@@ -68,7 +73,7 @@ class CardOverview extends StatelessWidget {
                     ),
               ),
             Text(
-              experienceRole,
+              widget.experienceRole,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headline6!.copyWith(
                     fontSize: 14,
@@ -77,7 +82,7 @@ class CardOverview extends StatelessWidget {
                   ),
             ),
             Text(
-              experienceDates,
+              widget.experienceDates,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headline6!.copyWith(
                     fontSize: 12,
