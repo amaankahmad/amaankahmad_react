@@ -20,7 +20,7 @@ class ExploreButton extends StatelessWidget {
         child: GestureDetector(
           onTap: onPressed,
           child: Container(
-            width: 135,
+            width: 150,
             height: 40,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(3),
