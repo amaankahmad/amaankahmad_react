@@ -66,6 +66,10 @@ class _HomeBannerState extends State<HomeBanner> {
                           ExploreButton(
                             onPressed: buttonPressed,
                           ),
+                          if (screenWidth < 600)
+                            SizedBox(
+                              height: defaultPadding * 2,
+                            ),
                           if (screenWidth > 600)
                             Padding(
                               padding: const EdgeInsets.only(
