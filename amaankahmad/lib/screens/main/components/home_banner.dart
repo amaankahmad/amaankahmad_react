@@ -63,10 +63,9 @@ class _HomeBannerState extends State<HomeBanner> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           if (screenWidth > 600) MyProjectsAnimatedText(),
-                          if (screenWidth > 600)
-                            ExploreButton(
-                              onPressed: buttonPressed,
-                            ),
+                          ExploreButton(
+                            onPressed: buttonPressed,
+                          ),
                           if (screenWidth > 600)
                             Padding(
                               padding: const EdgeInsets.only(

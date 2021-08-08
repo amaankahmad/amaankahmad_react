@@ -88,7 +88,7 @@ class MainScreen extends StatelessWidget {
                                   HomeBanner(
                                     buttonPressed: () =>
                                         Scrollable.ensureVisible(
-                                            projectsKey.currentContext!,
+                                            experienceKey.currentContext!,
                                             alignment: 0.25,
                                             duration: Duration(seconds: 1)),
                                   ),
