@@ -72,13 +72,13 @@ class _HomeBannerState extends State<HomeBanner> {
                               padding: const EdgeInsets.only(
                                   left: defaultPadding / 2),
                               child: Container(
-                                height: screenHeight * 0.1,
+                                height: screenHeight * 0.15,
                                 child: Row(
                                   children: [
                                     Container(
                                       child: Padding(
                                         padding: const EdgeInsets.all(
-                                            defaultPadding),
+                                            defaultPadding * 0.85),
                                         child: Image.asset(
                                             "assets/images/imperial/Imperial College London Logo.png"),
                                       ),
