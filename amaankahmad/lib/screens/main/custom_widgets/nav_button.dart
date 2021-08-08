@@ -31,6 +31,7 @@ class _NavButtonState extends State<NavButton> {
         padding: const EdgeInsets.only(bottom: defaultPadding / 2),
         child: GestureDetector(
           child: Container(
+            height: 36,
             width: sizeWidth,
             decoration: BoxDecoration(
               border: Border(
