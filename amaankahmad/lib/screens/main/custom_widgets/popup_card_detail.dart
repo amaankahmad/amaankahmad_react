@@ -90,11 +90,7 @@ class _CardDetailState extends State<CardDetail> {
                             top: defaultPadding, bottom: defaultPadding / 2),
                         child: Image.asset(
                           widget.imagePath,
-                          width: (screenWidth > 560)
-                              ? ((Responsive.isDesktop(context))
-                                  ? screenWidth * 0.25
-                                  : screenWidth * 0.4)
-                              : screenWidth * 0.8,
+                          fit: BoxFit.fitWidth,
                         ),
                       ),
                     ),

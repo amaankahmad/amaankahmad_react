@@ -26,6 +26,7 @@ class CardOverview extends StatefulWidget {
 class _CardOverviewState extends State<CardOverview> {
   @override
   Widget build(BuildContext context) {
+    precacheImage(AssetImage(widget.imagePath), context);
     final screenWidth = (MediaQuery.of(context).size.width > 1440)
         ? 1440
         : MediaQuery.of(context).size.width;
