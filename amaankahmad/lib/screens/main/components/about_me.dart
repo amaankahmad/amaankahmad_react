@@ -5,7 +5,7 @@ class AboutMe extends StatelessWidget {
   const AboutMe({required Key key}) : super(key: key);
 
   final String introduction =
-      "A little short introduction; I'm Amaan Ahmad, and this is my personal website, regarding who I am, all my projects, aspirations and hobbies. Currently, I am a 3rd year studying Computational Medical Engineering (MEng) at Imperial College London, looking to pursue Software Engineering and Data Science in the future!\n\nHaving developed a strong foundation in Maths, Physics and Computing, I am determined to develop my skills in the Software Engineering field through new projects and opportunities. This interest has taken up the form of Web and App development as well as through Machine Learning Vision projects in my free time. For more, please see the \"My Projects\" section below.\n\nCurrently, I am looking to develop my knowledge in neighbouring disciplines whilst making relevant contacts! If you would like to connect - please reach out via the links above or the contact form below!";
+      "A little short introduction; My name is Amaan Ahmad and this is my personal website. It tells you about who I am, my projects, aspirations and hobbies. I am self taught programmer and currently a 3rd year studying Computational Medical Engineering (MEng) at Imperial College London, looking to pursue Software Engineering and Data Science in the future!\n\nHaving developed a strong foundation in Maths, Physics and Computing, I have been exploring my interest in Software through Web and App development as well as Machine Learning Vision projects in my free time. For more, please see the \"My Projects\" section below.\n\nCurrently, I am looking to develop my knowledge in associated disciplines,  whilst making relevant contacts! If you would like to connect - please reach out via the links above or the contact links!";
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,9 @@ class AboutMe extends StatelessWidget {
                 Expanded(
                   flex: 4,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: defaultPadding * 2),
+                    padding: (screenWidth > 450)
+                        ? const EdgeInsets.only(top: defaultPadding * 2)
+                        : const EdgeInsets.only(top: defaultPaddingSmall * 2),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(screenHeight * 0.04),
                       child: Image.asset("assets/images/me/me.jpg",
@@ -38,7 +40,9 @@ class AboutMe extends StatelessWidget {
                 Expanded(
                   flex: 6,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: defaultPadding * 1.5),
+                    padding: (screenWidth > 450)
+                        ? const EdgeInsets.only(top: defaultPadding * 1.5)
+                        : const EdgeInsets.only(top: defaultPaddingSmall * 1.5),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -88,7 +92,9 @@ class AboutMe extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: defaultPadding * 2),
+                  padding: (screenWidth > 450)
+                      ? const EdgeInsets.only(top: defaultPadding * 2)
+                      : const EdgeInsets.only(top: defaultPaddingSmall * 2),
                   child: Image.asset("assets/images/me/me.jpg",
                       width: screenWidth * 0.8),
                 ),

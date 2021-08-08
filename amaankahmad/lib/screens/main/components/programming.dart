@@ -7,13 +7,17 @@ class Programming extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Divider(),
         Padding(
-          padding: const EdgeInsets.only(
-              top: defaultPadding / 2, bottom: defaultPadding),
+          padding: (screenWidth > 450)
+              ? const EdgeInsets.only(
+                  top: defaultPadding / 2, bottom: defaultPadding)
+              : const EdgeInsets.only(
+                  top: defaultPaddingSmall / 2, bottom: defaultPaddingSmall),
           child: Text(
             "Programming",
             style: Theme.of(context).textTheme.subtitle2,

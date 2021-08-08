@@ -7,23 +7,33 @@ class Awards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return Padding(
-      padding: const EdgeInsets.only(
-          left: defaultPadding * 4,
-          right: defaultPadding * 4,
-          top: defaultPadding * 2),
+      padding: (screenWidth > 450)
+          ? const EdgeInsets.only(
+              left: defaultPadding * 4,
+              right: defaultPadding * 4,
+              top: defaultPadding * 2)
+          : const EdgeInsets.only(
+              left: defaultPaddingSmall * 4,
+              right: defaultPaddingSmall * 4,
+              top: defaultPaddingSmall * 2),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Align(
             alignment: Alignment.topLeft,
             child: Text(
-              "Awards and Honours:",
-              style: TextStyle(color: Colors.greenAccent, fontSize: 48),
+              "Honours and Awards:",
+              style: (screenWidth > 560)
+                  ? TextStyle(color: Colors.greenAccent, fontSize: 48)
+                  : TextStyle(color: Colors.greenAccent, fontSize: 36),
             ),
           ),
           SizedBox(
-            height: defaultPadding * 2,
+            height: (screenWidth > 450)
+                ? defaultPadding * 2
+                : defaultPaddingSmall * 2,
           ),
           CustomListTile(
             thumbnail: Image.asset("assets/images/raeng/logo.jpeg"),

@@ -36,11 +36,17 @@ class _HomeBannerState extends State<HomeBanner> {
             color: darkColor.withOpacity(0.66),
           ),
           Padding(
-            padding: const EdgeInsets.only(
-              top: defaultPadding / 2,
-              left: defaultPadding,
-              right: defaultPadding / 2,
-            ),
+            padding: (screenWidth > 450)
+                ? const EdgeInsets.only(
+                    top: defaultPadding / 2,
+                    left: defaultPadding,
+                    right: defaultPadding / 2,
+                  )
+                : const EdgeInsets.only(
+                    top: defaultPaddingSmall / 2,
+                    left: defaultPaddingSmall,
+                    right: defaultPaddingSmall / 2,
+                  ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

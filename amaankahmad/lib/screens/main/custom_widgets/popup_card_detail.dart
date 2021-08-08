@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
+import 'package:flutter_profile/responsive.dart';
 
 class CardDetail extends StatelessWidget {
   final String tag;
@@ -34,7 +35,11 @@ class CardDetail extends StatelessWidget {
           child: Hero(
             tag: tag,
             child: Container(
-              width: screenWidth * 0.35,
+              width: (screenWidth > 560)
+                  ? ((Responsive.isDesktop(context))
+                      ? screenWidth * 0.35
+                      : screenWidth * 0.5)
+                  : screenWidth * 0.9,
               height: screenHeight * 0.75,
               decoration: BoxDecoration(
                   color: Color(0xFF1A1E36),
@@ -60,6 +65,7 @@ class CardDetail extends StatelessWidget {
                     ),
                     Text(
                       experienceTitle,
+                      textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.headline6!.copyWith(
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
@@ -78,6 +84,7 @@ class CardDetail extends StatelessWidget {
                       ),
                     Text(
                       experienceRole,
+                      textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.headline6!.copyWith(
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
@@ -86,6 +93,7 @@ class CardDetail extends StatelessWidget {
                     ),
                     Text(
                       experienceDates,
+                      textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.headline6!.copyWith(
                             fontSize: 16,
                             fontWeight: FontWeight.normal,

@@ -7,5 +7,6 @@ const bodyTextColor = Color(0xFF8B8B8D);
 const bgColor = Color(0xFF1E1E28);
 
 const defaultPadding = 20.0;
+const defaultPaddingSmall = 10.0;
 const defaultDuration = Duration(seconds: 1); // used for animations
 const maxWidth = 1440.0; // max width of our web

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
+import 'package:flutter_profile/screens/main/components/languages.dart';
 import 'package:flutter_profile/screens/main/components/links.dart';
 import 'package:flutter_profile/screens/main/components/my_info.dart';
 import 'package:flutter_profile/screens/main/components/programming.dart';
@@ -12,29 +13,26 @@ class SideMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return Drawer(
       child: Column(
         children: [
           Expanded(
-            flex: 5,
+            flex: (screenHeight > 560) ? ((screenHeight > 800) ? 5 : 8) : 12,
             child: MyInfo(),
           ),
           Expanded(
-            flex: 12,
+            flex: (screenHeight > 450) ? 12 : 3,
             child: SingleChildScrollView(
-              padding: EdgeInsets.all(defaultPadding),
+              padding: (screenWidth > 450)
+                  ? EdgeInsets.all(defaultPadding)
+                  : EdgeInsets.all(defaultPaddingSmall),
               child: Column(
                 children: [
-                  // AreaInfoText(
-                  //   title: "Location",
-                  //   text: "London, England",
-                  // ),
-                  // AreaInfoText(
-                  //   title: "Age",
-                  //   text: "20",
-                  // ),
                   Skills(),
                   Programming(),
+                  Languages(),
                   Links(),
                 ],
               ),

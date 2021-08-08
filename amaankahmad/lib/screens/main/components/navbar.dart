@@ -52,10 +52,15 @@ class _NavBarState extends State<NavBar> {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.only(
-            left: defaultPadding,
-            bottom: defaultPadding / 2,
-            right: defaultPadding / 2),
+        padding: (screenWidth > 450)
+            ? const EdgeInsets.only(
+                left: defaultPadding,
+                bottom: defaultPadding / 2,
+                right: defaultPadding / 2)
+            : const EdgeInsets.only(
+                left: defaultPaddingSmall,
+                bottom: defaultPaddingSmall / 2,
+                right: defaultPaddingSmall / 2),
         child: (Responsive.isTablet(context))
             ? null
             : Row(
@@ -73,7 +78,9 @@ class _NavBarState extends State<NavBar> {
                     );
                   }),
                   Padding(
-                    padding: const EdgeInsets.only(top: defaultPadding / 4),
+                    padding: (screenWidth > 450)
+                        ? const EdgeInsets.only(top: defaultPadding / 4)
+                        : const EdgeInsets.only(top: defaultPaddingSmall / 4),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -107,8 +114,11 @@ class _NavBarState extends State<NavBar> {
                         ),
                         if (screenWidth > 1310)
                           Padding(
-                            padding: const EdgeInsets.only(
-                                bottom: defaultPadding / 2),
+                            padding: (screenWidth > 450)
+                                ? const EdgeInsets.only(
+                                    bottom: defaultPadding / 2)
+                                : const EdgeInsets.only(
+                                    bottom: defaultPadding / 2),
                             child: Links(),
                           ),
                       ],

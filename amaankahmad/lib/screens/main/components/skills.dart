@@ -9,12 +9,15 @@ class Skills extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // Divider(),
         Padding(
-          padding: const EdgeInsets.only(bottom: defaultPadding),
+          padding: (screenWidth > 450)
+              ? const EdgeInsets.only(bottom: defaultPadding)
+              : const EdgeInsets.only(bottom: defaultPadding),
           child: Text(
             "Skills",
             style: Theme.of(context).textTheme.subtitle2,
@@ -28,7 +31,9 @@ class Skills extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: defaultPadding * 0.75,
+              width:
+                  ((screenWidth > 450) ? defaultPadding : defaultPaddingSmall) *
+                      0.75,
             ),
             Expanded(
               child: AnimatedSkillsCircle(
@@ -36,7 +41,9 @@ class Skills extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: defaultPadding * 0.75,
+              width:
+                  ((screenWidth > 450) ? defaultPadding : defaultPaddingSmall) *
+                      0.75,
             ),
             Expanded(
               child: AnimatedSkillsCircle(
@@ -56,7 +63,9 @@ class Skills extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: defaultPadding * 0.75,
+              width:
+                  ((screenWidth > 450) ? defaultPadding : defaultPaddingSmall) *
+                      0.75,
             ),
             Expanded(
               child: AnimatedSkillsCircle(
@@ -64,7 +73,9 @@ class Skills extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: defaultPadding * 0.75,
+              width:
+                  ((screenWidth > 450) ? defaultPadding : defaultPaddingSmall) *
+                      0.75,
             ),
             Expanded(
               child: AnimatedSkillsCircle(

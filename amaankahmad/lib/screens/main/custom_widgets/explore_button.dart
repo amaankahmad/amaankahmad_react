@@ -12,18 +12,16 @@ class ExploreButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HoverButton(builder: (isHovering) {
-      final screenHeight = MediaQuery.of(context).size.height;
       final bgColor = isHovering ? Colors.blue : Colors.green[300];
       final textColor = isHovering ? Colors.white : darkColor;
       final fWeight = isHovering ? FontWeight.w900 : FontWeight.w900;
-      final sizeHeight = screenHeight * 0.04;
       return Padding(
         padding: const EdgeInsets.only(bottom: 7.0),
         child: GestureDetector(
           onTap: onPressed,
           child: Container(
             width: 135,
-            height: sizeHeight,
+            height: 40,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(3),
               color: bgColor,

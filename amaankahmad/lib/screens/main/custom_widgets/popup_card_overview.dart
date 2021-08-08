@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
+import 'package:flutter_profile/responsive.dart';
 
 class CardOverview extends StatelessWidget {
   final String tag;
@@ -27,7 +28,11 @@ class CardOverview extends StatelessWidget {
     return Hero(
       tag: tag,
       child: Container(
-        width: (screenWidth > 700) ? screenWidth * 0.2 : screenWidth * 0.3,
+        width: (screenWidth > 560)
+            ? ((Responsive.isDesktop(context))
+                ? screenWidth * 0.2
+                : screenWidth * 0.25)
+            : screenWidth * 0.8,
         decoration: BoxDecoration(
             color: Color(0xFF1A1E36),
             borderRadius: BorderRadius.all(Radius.circular(20))),
@@ -36,7 +41,11 @@ class CardOverview extends StatelessWidget {
             Image.asset(
               imagePath,
               height: screenHeight * 0.2,
-              width: screenWidth * 0.3,
+              width: (screenWidth > 560)
+                  ? ((screenWidth > 700)
+                      ? screenWidth * 0.15
+                      : screenWidth * 0.25)
+                  : screenWidth * 0.7,
             ),
             Divider(),
             Text(

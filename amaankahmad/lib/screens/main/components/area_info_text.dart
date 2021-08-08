@@ -12,8 +12,11 @@ class AreaInfoText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return Padding(
-      padding: const EdgeInsets.only(bottom: defaultPadding / 2),
+      padding: (screenWidth > 450)
+          ? const EdgeInsets.only(bottom: defaultPadding / 2)
+          : const EdgeInsets.only(bottom: defaultPaddingSmall / 2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

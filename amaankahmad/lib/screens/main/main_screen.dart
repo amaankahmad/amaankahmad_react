@@ -7,7 +7,7 @@ import 'package:flutter_profile/screens/main/components/contact.dart';
 import 'package:flutter_profile/screens/main/components/experience.dart';
 import 'package:flutter_profile/screens/main/components/hobbies.dart';
 import 'package:flutter_profile/screens/main/components/home_banner.dart';
-import 'package:flutter_profile/screens/main/components/independant_learning.dart';
+import 'package:flutter_profile/screens/main/components/independent_learning.dart';
 import 'package:flutter_profile/screens/main/components/my_projects.dart';
 import 'package:flutter_profile/screens/main/components/navbar.dart';
 import 'package:flutter_profile/screens/main/components/side_menu.dart';
@@ -18,6 +18,7 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
     final aboutMeKey = GlobalKey();
     final experienceKey = GlobalKey();
     final projectsKey = GlobalKey();
@@ -29,13 +30,23 @@ class MainScreen extends StatelessWidget {
       appBar: Responsive.isDesktop(context)
           ? null
           : AppBar(
-              title: Text(
-                "Amaan Ahmad",
-                style: Theme.of(context).textTheme.headline3!.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-              ),
+              title: Text("Amaan Ahmad",
+                  style: (screenWidth > 340)
+                      ? ((screenWidth > 435)
+                          ? Theme.of(context).textTheme.headline3!.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              )
+                          : Theme.of(context).textTheme.headline3!.copyWith(
+                                fontSize: 32,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ))
+                      : Theme.of(context).textTheme.headline3!.copyWith(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          )),
               leading: Builder(
                 builder: (context) => IconButton(
                     icon: Icon(Icons.menu),
