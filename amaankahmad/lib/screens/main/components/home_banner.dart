@@ -23,6 +23,7 @@ class _HomeBannerState extends State<HomeBanner> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
     return AspectRatio(
       aspectRatio: 3,
       child: Stack(
@@ -70,19 +71,24 @@ class _HomeBannerState extends State<HomeBanner> {
                             Padding(
                               padding: const EdgeInsets.only(
                                   left: defaultPadding / 2),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    width: screenWidth * 0.05,
-                                    child: Image.asset(
-                                        "assets/images/imperial/Imperial College London Logo.png"),
-                                  ),
-                                  Container(
-                                    width: screenWidth * 0.125,
-                                    child: Image.asset(
-                                        "assets/images/stpauls/SPS_logo_transparent.png"),
-                                  ),
-                                ],
+                              child: Container(
+                                height: screenHeight * 0.1,
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(
+                                            defaultPadding),
+                                        child: Image.asset(
+                                            "assets/images/imperial/Imperial College London Logo.png"),
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Image.asset(
+                                          "assets/images/stpauls/SPS_logo_transparent.png"),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                         ],

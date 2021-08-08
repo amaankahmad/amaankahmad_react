@@ -6,7 +6,7 @@ class Languages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final languages_list = [
+    final languagesList = [
       "English (Fluent)",
       "Portuguese (Fluent / Native)",
       "Spanish (Intermediate, Level 3)",
@@ -29,14 +29,14 @@ class Languages extends StatelessWidget {
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
-        for (int i = 0; i < languages_list.length; i++)
+        for (int i = 0; i < languagesList.length; i++)
           Padding(
             padding: const EdgeInsets.symmetric(
                 horizontal: defaultPadding * 0.5, vertical: 4),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                " • " + languages_list[i],
+                " • " + languagesList[i],
                 style: Theme.of(context).textTheme.headline6!.copyWith(
                       fontSize: 14,
                       fontWeight: FontWeight.normal,

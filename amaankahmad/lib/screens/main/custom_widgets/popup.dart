@@ -12,6 +12,7 @@ class PopUpCard extends StatelessWidget {
   final String experienceRole;
   final String experienceRoleExt;
   final String experienceDates;
+  final String link;
   final List description;
 
   const PopUpCard({
@@ -25,6 +26,7 @@ class PopUpCard extends StatelessWidget {
     required this.experienceRoleExt,
     required this.experienceDates,
     required this.description,
+    required this.link,
   }) : super(key: key);
 
   @override
@@ -41,6 +43,7 @@ class PopUpCard extends StatelessWidget {
               experienceRole: experienceRoleExt,
               experienceDates: experienceDates,
               description: description,
+              link: link,
             );
           }),
         );

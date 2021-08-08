@@ -18,7 +18,6 @@ class _NavButtonState extends State<NavButton> {
   @override
   Widget build(BuildContext context) {
     return HoverButton(builder: (isHovering) {
-      final screenHeight = MediaQuery.of(context).size.height;
       final screenWidth = MediaQuery.of(context).size.width;
       final undColor = isHovering ? Colors.tealAccent : Colors.white54;
       final undThick = isHovering ? 3.0 : 2.0;
@@ -27,15 +26,12 @@ class _NavButtonState extends State<NavButton> {
       final sizeWidth = (screenWidth > 1440)
           ? (isHovering ? 1440 * 0.10 : 1440 * 0.09)
           : (isHovering ? screenWidth * 0.10 : screenWidth * 0.09);
-      final sizeHeight =
-          isHovering ? screenHeight * 0.045 : screenHeight * 0.04;
       final fSize = isHovering ? 14.0 : 13.0;
       return Padding(
         padding: const EdgeInsets.only(bottom: defaultPadding / 2),
         child: GestureDetector(
           child: Container(
             width: sizeWidth,
-            height: sizeHeight,
             decoration: BoxDecoration(
               border: Border(
                 bottom: BorderSide(

@@ -54,6 +54,7 @@ class MyProjects extends StatelessWidget {
                               experienceRoleExt:
                                   "Co-Founder, Project and Software Lead",
                               experienceDates: "Mar. 2021 - Present",
+                              link: "",
                               description: [
                                 "Leading the development of a web-app, using React that aims to increase the accessibility of educational resources by collating relevant information and structuring this into a pathway that pushes students to reach their potential.",
                                 "Organising the external events and deadlines for super curricular activity applications that are nearby on a calendar.",
@@ -70,6 +71,7 @@ class MyProjects extends StatelessWidget {
                               experienceRoleExt:
                                   "Founder, Project and Software Lead",
                               experienceDates: "Jan. 2021 - Present",
+                              link: "",
                               description: [
                                 "Developing a cross-platform app using Flutter that allows users to track their workout progress and share with friends.",
                                 "Building an AI to suggest workout structure using a variety of exercises based on the users’ goals and progress history.",
@@ -88,6 +90,8 @@ class MyProjects extends StatelessWidget {
                               experienceRole: "Personal Project",
                               experienceRoleExt: "Personal Project",
                               experienceDates: "Aug. 2020 - Sep. 2020",
+                              link:
+                                  "https://github.com/amaankahmad/Bank_Custom_GUI",
                               description: [
                                 "Developed and designed a custom graphical user interface (GUI) using Tkinter.",
                                 "Gained a deeper understanding of the integrity of the banking environment through constant use of validations, ensuring the safety of account information in performing tasks such as changing personal data, making deposits and withdrawals.",
@@ -112,6 +116,7 @@ class MyProjects extends StatelessWidget {
                               experienceRole: "Project and Software Lead",
                               experienceRoleExt: "Project and Software Lead",
                               experienceDates: "Mar. 2020",
+                              link: "",
                               description: [
                                 "Led a team of a prototype vest, using Arduino, that monitored the posture of athletes during training.",
                                 "Development of a software that tracks cardiovascular health and recurring postural issues, relaying feedback to user through haptic sensors built into the vest and our via our app built using Java and Android Studio.",
@@ -126,6 +131,8 @@ class MyProjects extends StatelessWidget {
                               experienceRole: "Project Lead",
                               experienceDates: "Jan. 2018 - Sep. 2018",
                               experienceRoleExt: "Project Lead",
+                              link:
+                                  "https://schools-aerospace-challenge.com/wp-content/uploads/2018/12/12.-Team-CAN.pdf",
                               description: [
                                 "Led as Team Captain for Finalist Team for the RAF Aerospace Challenge where we designed 3 technological adaptations to the RAF’s Merlin HC3 helicopter, aiming to solve issues that cause a huge amount of pilot accidents.",
                                 "Incorporation of thermoelectric theory to generate energy from the helicopter’s environment to power sensors and a drone to scan ahead of the vehicle during hot, sandy conditions, providing information on the safest route to take.",
@@ -143,6 +150,8 @@ class MyProjects extends StatelessWidget {
                               experienceDates: "Nov. 2017 - Mar. 2019",
                               experienceRoleExt:
                                   "Chassis, Gear train & Bodywork Engineer, Head of Marketing",
+                              link:
+                                  "https://www.greenpower.co.uk/news/2018-f24-f24-season-roundup",
                               description: [
                                 "Developed an electric race car from scratch for a competition to race against other schools.",
                                 "Headed the Marketing team and collaborated in the Chassis & Bodywork, Gear Train and Sponsorship teams.",
@@ -170,6 +179,7 @@ class MyProjects extends StatelessWidget {
                               experienceRoleExt:
                                   "Co-Founder, Project and Software Lead",
                               experienceDates: "Mar. 2021 - Present",
+                              link: "",
                               description: [
                                 "Leading the development of a web-app, using React that aims to increase the accessibility of educational resources by collating relevant information and structuring this into a pathway that pushes students to reach their potential.",
                                 "Organising the external events and deadlines for super curricular activity applications that are nearby on a calendar.",
@@ -186,6 +196,7 @@ class MyProjects extends StatelessWidget {
                               experienceRoleExt:
                                   "Founder, Project and Software Lead",
                               experienceDates: "Jan. 2021 - Present",
+                              link: "",
                               description: [
                                 "Developing a cross-platform app using Flutter that allows users to track their workout progress and share with friends.",
                                 "Building an AI to suggest workout structure using a variety of exercises based on the users’ goals and progress history.",
@@ -213,6 +224,8 @@ class MyProjects extends StatelessWidget {
                               experienceRole: "Personal Project",
                               experienceRoleExt: "Personal Project",
                               experienceDates: "Aug. 2020 - Sep. 2020",
+                              link:
+                                  "https://github.com/amaankahmad/Bank_Custom_GUI",
                               description: [
                                 "Developed and designed a custom graphical user interface (GUI) using Tkinter.",
                                 "Gained a deeper understanding of the integrity of the banking environment through constant use of validations, ensuring the safety of account information in performing tasks such as changing personal data, making deposits and withdrawals.",
@@ -229,6 +242,7 @@ class MyProjects extends StatelessWidget {
                               experienceRole: "Project and Software Lead",
                               experienceRoleExt: "Project and Software Lead",
                               experienceDates: "Mar. 2020",
+                              link: "",
                               description: [
                                 "Led a team of a prototype vest, using Arduino, that monitored the posture of athletes during training.",
                                 "Development of a software that tracks cardiovascular health and recurring postural issues, relaying feedback to user through haptic sensors built into the vest and our via our app built using Java and Android Studio.",
@@ -252,6 +266,8 @@ class MyProjects extends StatelessWidget {
                               experienceRole: "Project Lead",
                               experienceDates: "Jan. 2018 - Sep. 2018",
                               experienceRoleExt: "Project Lead",
+                              link:
+                                  "https://schools-aerospace-challenge.com/wp-content/uploads/2018/12/12.-Team-CAN.pdf",
                               description: [
                                 "Led as Team Captain for Finalist Team for the RAF Aerospace Challenge where we designed 3 technological adaptations to the RAF’s Merlin HC3 helicopter, aiming to solve issues that cause a huge amount of pilot accidents.",
                                 "Incorporation of thermoelectric theory to generate energy from the helicopter’s environment to power sensors and a drone to scan ahead of the vehicle during hot, sandy conditions, providing information on the safest route to take.",
@@ -269,6 +285,8 @@ class MyProjects extends StatelessWidget {
                               experienceDates: "Nov. 2017 - Mar. 2019",
                               experienceRoleExt:
                                   "Chassis, Gear train & Bodywork Engineer, Head of Marketing",
+                              link:
+                                  "https://www.greenpower.co.uk/news/2018-f24-f24-season-roundup",
                               description: [
                                 "Developed an electric race car from scratch for a competition to race against other schools.",
                                 "Headed the Marketing team and collaborated in the Chassis & Bodywork, Gear Train and Sponsorship teams.",
@@ -292,6 +310,7 @@ class MyProjects extends StatelessWidget {
                       experienceRoleExt:
                           "Co-Founder, Project and Software Lead",
                       experienceDates: "Mar. 2021 - Present",
+                      link: "",
                       description: [
                         "Leading the development of a web-app, using React that aims to increase the accessibility of educational resources by collating relevant information and structuring this into a pathway that pushes students to reach their potential.",
                         "Organising the external events and deadlines for super curricular activity applications that are nearby on a calendar.",
@@ -310,6 +329,7 @@ class MyProjects extends StatelessWidget {
                       experienceRole: "Founder and Project Lead",
                       experienceRoleExt: "Founder, Project and Software Lead",
                       experienceDates: "Jan. 2021 - Present",
+                      link: "",
                       description: [
                         "Developing a cross-platform app using Flutter that allows users to track their workout progress and share with friends.",
                         "Building an AI to suggest workout structure using a variety of exercises based on the users’ goals and progress history.",
@@ -330,6 +350,7 @@ class MyProjects extends StatelessWidget {
                       experienceRole: "Personal Project",
                       experienceRoleExt: "Personal Project",
                       experienceDates: "Aug. 2020 - Sep. 2020",
+                      link: "https://github.com/amaankahmad/Bank_Custom_GUI",
                       description: [
                         "Developed and designed a custom graphical user interface (GUI) using Tkinter.",
                         "Gained a deeper understanding of the integrity of the banking environment through constant use of validations, ensuring the safety of account information in performing tasks such as changing personal data, making deposits and withdrawals.",
@@ -348,6 +369,7 @@ class MyProjects extends StatelessWidget {
                       experienceRole: "Project and Software Lead",
                       experienceRoleExt: "Project and Software Lead",
                       experienceDates: "Mar. 2020",
+                      link: "",
                       description: [
                         "Led a team of a prototype vest, using Arduino, that monitored the posture of athletes during training.",
                         "Development of a software that tracks cardiovascular health and recurring postural issues, relaying feedback to user through haptic sensors built into the vest and our via our app built using Java and Android Studio.",
@@ -365,6 +387,8 @@ class MyProjects extends StatelessWidget {
                       experienceRole: "Project Lead",
                       experienceDates: "Jan. 2018 - Sep. 2018",
                       experienceRoleExt: "Project Lead",
+                      link:
+                          "https://schools-aerospace-challenge.com/wp-content/uploads/2018/12/12.-Team-CAN.pdf",
                       description: [
                         "Led as Team Captain for Finalist Team for the RAF Aerospace Challenge where we designed 3 technological adaptations to the RAF’s Merlin HC3 helicopter, aiming to solve issues that cause a huge amount of pilot accidents.",
                         "Incorporation of thermoelectric theory to generate energy from the helicopter’s environment to power sensors and a drone to scan ahead of the vehicle during hot, sandy conditions, providing information on the safest route to take.",
@@ -384,6 +408,8 @@ class MyProjects extends StatelessWidget {
                       experienceDates: "Nov. 2017 - Mar. 2019",
                       experienceRoleExt:
                           "Chassis, Gear train & Bodywork Engineer, Head of Marketing",
+                      link:
+                          "https://www.greenpower.co.uk/news/2018-f24-f24-season-roundup",
                       description: [
                         "Developed an electric race car from scratch for a competition to race against other schools.",
                         "Headed the Marketing team and collaborated in the Chassis & Bodywork, Gear Train and Sponsorship teams.",

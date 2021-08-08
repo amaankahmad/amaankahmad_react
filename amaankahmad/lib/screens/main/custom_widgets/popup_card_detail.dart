@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
 import 'package:flutter_profile/responsive.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CardDetail extends StatelessWidget {
   final String tag;
@@ -10,6 +11,7 @@ class CardDetail extends StatelessWidget {
   final String experienceRole;
   final String experienceDates;
   final List description;
+  final String link;
   const CardDetail(
       {Key? key,
       required this.tag,
@@ -18,8 +20,17 @@ class CardDetail extends StatelessWidget {
       required this.experienceSubtitle,
       required this.experienceRole,
       required this.experienceDates,
-      required this.description})
+      required this.description,
+      required this.link})
       : super(key: key);
+
+  openURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw "Could not launch URL";
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -126,6 +137,46 @@ class CardDetail extends StatelessWidget {
                           ),
                         ),
                       ),
+                    // if (link != "")
+                    //   HoverButton(builder: (isHovering) {
+                    //     final bgColor =
+                    //         isHovering ? Colors.blue : Colors.green[300];
+                    //     final textColor = isHovering ? Colors.white : darkColor;
+                    //     final fWeight =
+                    //         isHovering ? FontWeight.w900 : FontWeight.w900;
+                    //     return Padding(
+                    //       padding: const EdgeInsets.only(bottom: 7.0),
+                    //       child: GestureDetector(
+                    //         // onPressed: openURL(link),
+                    //         child: Container(
+                    //           width: 135,
+                    //           height: 40,
+                    //           decoration: BoxDecoration(
+                    //             borderRadius: BorderRadius.circular(3),
+                    //             color: bgColor,
+                    //           ),
+                    //           child: Padding(
+                    //             padding: const EdgeInsets.symmetric(
+                    //                 horizontal: 12.0, vertical: 8.0),
+                    //             child: Center(
+                    //               child: Text(
+                    //                 "More",
+                    //                 style: TextStyle(
+                    //                     color: Colors.black, fontSize: 18),
+                    //               ),
+                    //               // child: Text(
+                    //               //   "Click Me",
+                    //               //   style: TextStyle(
+                    //               //       color: textColor,
+                    //               //       fontWeight: fWeight,
+                    //               //       fontSize: 18),
+                    //               // ),
+                    //             ),
+                    //           ),
+                    //         ),
+                    //       ),
+                    //     );
+                    //   }),
                     SizedBox(
                       height: screenHeight * 0.025,
                     ),
