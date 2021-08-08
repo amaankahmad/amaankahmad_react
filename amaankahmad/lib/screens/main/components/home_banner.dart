@@ -68,14 +68,14 @@ class _HomeBannerState extends State<HomeBanner> {
                           ),
                           if (screenWidth < 600)
                             SizedBox(
-                              height: defaultPadding * 2,
+                              height: 60,
                             ),
                           if (screenWidth > 600)
                             Padding(
                               padding: const EdgeInsets.only(
                                   left: defaultPadding / 2),
                               child: Container(
-                                height: screenHeight * 0.15,
+                                height: screenHeight * 0.125,
                                 child: Row(
                                   children: [
                                     Container(

@@ -48480,8 +48480,8 @@ q=H.a([],k)
 s=p>600
 if(s)q.push(new V.BH(r))
 q.push(new O.Aq(this.d,r))
-if(p<600)q.push(T.aQ(r,40,r))
-if(s)q.push(new T.b_(C.pn,M.b6(r,T.cU(H.a([M.b6(r,new T.b_(C.pr,U.d7("assets/images/imperial/Imperial College London Logo.png",r,r,r),r),C.k,r,r,r,r,r,r,r,r,r,r),M.b6(r,U.d7(u.j,r,r,r),C.k,r,r,r,r,r,r,r,r,r,r)],k),C.p,C.y,C.R),C.k,r,r,r,r,o.a.b*0.15,r,r,r,r,r),r))
+if(p<600)q.push(T.aQ(r,60,r))
+if(s)q.push(new T.b_(C.pn,M.b6(r,T.cU(H.a([M.b6(r,new T.b_(C.pr,U.d7("assets/images/imperial/Imperial College London Logo.png",r,r,r),r),C.k,r,r,r,r,r,r,r,r,r,r),M.b6(r,U.d7(u.j,r,r,r),C.k,r,r,r,r,r,r,r,r,r,r)],k),C.p,C.y,C.R),C.k,r,r,r,r,o.a.b*0.125,r,r,r,r,r),r))
 j.push(T.de(T.bS(q,C.ac,C.b0),1))
 return new T.mI(3,T.lZ(C.bg,H.a([n,m,new T.b_(l,T.cU(H.a([T.bS(j,C.p,C.y)],k),C.p,C.bR,C.R),r)],k),C.f1),r)}}
 O.AX.prototype={
