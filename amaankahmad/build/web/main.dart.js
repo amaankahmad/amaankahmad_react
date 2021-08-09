@@ -48438,7 +48438,7 @@ F.BE.prototype={
 E:function(a,b){var s=null,r=X.acE(C.a1),q=K.aj(b).a1,p=B.eS(q.a),o=B.eS(q.b),n=B.eS(q.c),m=B.eS(q.d),l=B.eS(q.e),k=B.eS(q.f),j=B.eS(q.r),i=B.eS(q.x),h=B.eS(q.y),g=B.eS(q.z),f=B.eS(q.Q)
 return new S.t7(new X.Br(s),"amaankahmad",r.Vy(C.h8,C.on,C.h8,R.YI(h,g,B.eS(q.ch),f,p,o,n,m,l,k,B.eS(q.cx),j,i).Ut(C.i).Vq(A.br(s,s,C.hg,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s),A.br(s,s,C.hg,s,s,s,s,s,s,s,s,s,s,s,s,s,!0,s,s,s,s,s,s,s))),!1,s)}}
 K.y8.prototype={
-E:function(a,b){var s,r,q,p,o,n=null,m="assets/images/me/me.jpg",l="Welcome!",k='A little short introduction; My name is Amaan Ahmad and this is my personal website. It tells you about who I am, my projects and aspirations. I am self taught programmer and currently a 3rd year studying Computational Medical Engineering (MEng) at Imperial College London, looking to pursue Software Engineering and Data Science in the future!\n\nHaving developed a strong foundation in Maths, Physics and Computing, I have been exploring my interest in Software through Web and App development as well as Machine Learning Vision through projects in my free time. For more, please see the "Experience" or "My Projects" section below.\n\nCurrently, I am looking to develop my knowledge in associated disciplines,  whilst making relevant contacts! If you would like to connect - please reach out via the contact links above!',j=t.w,i=b.K(j).f.a.a,h=b.K(j).f.a.b
+E:function(a,b){var s,r,q,p,o,n=null,m="assets/images/me/me.jpg",l="Welcome!",k='A little short introduction - my name is Amaan Ahmad and this is my personal website. It tells you about who I am, my projects and aspirations. I am a self-taught programmer and currently a 3rd year of studying Computational Medical Engineering (MEng) at Imperial College London and I am looking to pursue Software Engineering and Data Science in the future!\n\nHaving developed a strong foundation in Maths, Physics and Computing, I have been exploring my interest in software through Web and App development as well as Machine Learning Vision through projects in my free time. For more, please see the "Experience" or "My Projects" sections below.\n\nCurrently, I am looking to develop my knowledge in associated disciplines, whilst making relevant contacts. If you would like to connect - please reach out via the contact links above!',j=t.w,i=b.K(j).f.a.a,h=b.K(j).f.a.b
 if(i>1000){j=T.de(M.b6(n,n,C.k,n,n,n,n,n,n,n,n,n,n),1)
 s=i>450
 r=s?C.hA:C.el
@@ -48787,7 +48787,7 @@ $S:0}
 X.St.prototype={
 $0:function(){var s=$.al.P$.Q.j(0,this.a)
 s.toString
-return F.ug(s,0.25,C.c_,P.bM(0,0,1))},
+return F.ug(s,0.1,C.c_,P.bM(0,0,1))},
 $S:25}
 X.Su.prototype={
 $0:function(){var s=$.al.P$.Q.j(0,this.a)

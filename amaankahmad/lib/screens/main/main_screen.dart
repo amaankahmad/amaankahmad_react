@@ -89,7 +89,7 @@ class MainScreen extends StatelessWidget {
                                     buttonPressed: () =>
                                         Scrollable.ensureVisible(
                                             experienceKey.currentContext!,
-                                            alignment: 0.25,
+                                            alignment: 0.1,
                                             duration: Duration(seconds: 1)),
                                   ),
                                   AboutMe(
