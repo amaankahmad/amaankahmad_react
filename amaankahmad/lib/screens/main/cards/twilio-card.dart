@@ -8,8 +8,8 @@ class TwilioPopUpCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return PopUpCard(
       tag: "twilio",
-      imagePath: "images/twilio/twilio-logo.png",
-      imagePathExt: "images/twilio/twilio-microvisor.png",
+      imagePath: "assets/images/twilio/twilio-logo.png",
+      imagePathExt: "assets/images/twilio/twilio-microvisor.png",
       experienceTitle: "Twilio",
       experienceSubtitle: "IoT Device builder platform: Microvisor",
       experienceRole: "Software Engineer Intern",
