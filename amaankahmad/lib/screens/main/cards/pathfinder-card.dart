@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/screens/main/custom_widgets/popup.dart';
 
-class KALLISTONPopUpCard extends StatelessWidget {
-  const KALLISTONPopUpCard({Key? key}) : super(key: key);
+class PathFinderPopUpCard extends StatelessWidget {
+  const PathFinderPopUpCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return PopUpCard(
-      tag: "kalliston",
-      imagePath: "assets/images/kalliston/logo.png",
-      imagePathExt: "assets/images/kalliston/app.png",
-      experienceTitle: "KALLISTON",
+      tag: "pathfinder",
+      imagePath: "assets/images/pathfinder/logo.png",
+      imagePathExt: "assets/images/pathfinder/banner.png",
+      experienceTitle: "PathFinder",
       experienceSubtitle: "-1",
-      experienceRole: "Founder and Project Lead",
-      experienceRoleExt: "Founder, Project and Software Lead",
-      experienceDates: "Jan. 2021 - Present",
-      link: "https://www.kalliston.co.uk",
+      experienceRole: "Project and Software Lead",
+      experienceRoleExt: "Co-Founder, Project and Software Lead",
+      experienceDates: "Mar. 2021 - Present",
+      link: "",
       description: [
-        "Developing a cross-platform app using Flutter that allows users to track their workout progress and share with friends.",
-        "Building an AI to suggest workout structure using a variety of exercises based on the users’ goals and progress history.",
-        "Providing analytics based on data collected on the individual’s progress, connected via Firebase.",
-        "Pitched at a Business Launchpad event to win funding that helps accelerate the release of this project on a larger scale.",
-        "Developing my project management skills as I lead a team of 5, to develop this project further and release to the public.",
+        "Leading the development of a web-app, using React that aims to increase the accessibility of educational resources by collating relevant information and structuring this into a pathway that pushes students to reach their potential.",
+        "Organising the external events and deadlines for super curricular activity applications that are nearby on a calendar.",
+        "Building of personalised and structured roadmaps for students to get closer to achieving their future goals.",
       ],
     );
   }

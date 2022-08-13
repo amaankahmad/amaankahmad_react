@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/screens/main/custom_widgets/popup.dart';
 
-class KALLISTONPopUpCard extends StatelessWidget {
-  const KALLISTONPopUpCard({Key? key}) : super(key: key);
+class RAFPopUpCard extends StatelessWidget {
+  const RAFPopUpCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return PopUpCard(
-      tag: "kalliston",
-      imagePath: "assets/images/kalliston/logo.png",
-      imagePathExt: "assets/images/kalliston/app.png",
-      experienceTitle: "KALLISTON",
-      experienceSubtitle: "-1",
-      experienceRole: "Founder and Project Lead",
-      experienceRoleExt: "Founder, Project and Software Lead",
-      experienceDates: "Jan. 2021 - Present",
-      link: "https://www.kalliston.co.uk",
+      tag: "raf",
+      imagePath: "assets/images/raf/logo.jpeg",
+      imagePathExt: "assets/images/raf/Chief.jpg",
+      experienceTitle: "RAF Aerospace Competition",
+      experienceSubtitle: "Engineering Competition",
+      experienceRole: "Project Lead",
+      experienceDates: "Jan. 2018 - Sep. 2018",
+      experienceRoleExt: "Project Lead",
+      link:
+          "https://schools-aerospace-challenge.com/wp-content/uploads/2018/12/12.-Team-CAN.pdf",
       description: [
-        "Developing a cross-platform app using Flutter that allows users to track their workout progress and share with friends.",
-        "Building an AI to suggest workout structure using a variety of exercises based on the users’ goals and progress history.",
-        "Providing analytics based on data collected on the individual’s progress, connected via Firebase.",
-        "Pitched at a Business Launchpad event to win funding that helps accelerate the release of this project on a larger scale.",
-        "Developing my project management skills as I lead a team of 5, to develop this project further and release to the public.",
+        "Led as Team Captain for Finalist Team for the RAF Aerospace Challenge where we designed 3 technological adaptations to the RAF’s Merlin HC3 helicopter, aiming to solve issues that cause a huge amount of pilot accidents.",
+        "Incorporation of thermoelectric theory to generate energy from the helicopter’s environment to power sensors and a drone to scan ahead of the vehicle during hot, sandy conditions, providing information on the safest route to take.",
+        "Redesigned the propeller system to use ducts for more efficient lift generation with 26% reduced noise pollution.",
       ],
     );
   }
