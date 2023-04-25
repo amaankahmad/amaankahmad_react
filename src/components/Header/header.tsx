@@ -62,7 +62,7 @@ export default function DrawerAppBar(props: Props) {
                 amaankahmad
               </span>
             </a>
-            <div className="flex items-center lg:order-2 ">
+            <div className="flex items-center md:order-2 ">
               <a
                 className="flex items-center px-2"
                 href="https://www.linkedin.com/in/amaankahmad/"
@@ -83,10 +83,10 @@ export default function DrawerAppBar(props: Props) {
               </a>
             </div>
             <div
-              className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+              className="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
               id="mobile-menu-2"
             >
-              <ul className="flex flex-col mt-4 font-bold lg:flex-row lg:space-x-8 lg:mt-0">
+              <ul className="flex flex-col mt-4 font-bold md:flex-row md:space-x-2 lg:space-x-8 md:mt-0">
                 <li>
                   <button
                     onClick={() => handleNavigationClick("about-me-section")}

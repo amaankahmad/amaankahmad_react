@@ -8,7 +8,7 @@ const PathFinderSection = () => {
   return (
     <div id="pathfinder-section">
       <LeftContentBlock imageSrc={Path} title="pathfinder">
-        <p className="text-2xl md:ml-16 leading-relaxed">
+        <p className="sm:text-xl md:text-2xl xl:ml-16 leading-relaxed">
           i'm a builder at heart. currently, i'm building{" "}
           <a
             href="https://www.thepathfinderproject.co.uk/"
@@ -23,10 +23,13 @@ const PathFinderSection = () => {
           <span className="underline">education system for the internet</span>.
           <br />
           <br />
-          the <span className="text-3xl font-black">big vision</span> is to
-          build a tool that allows someone to get a university-level education{" "}
-          <span className="underline">completely for free</span> from the
-          comfort of their own home.
+          the{" "}
+          <span className="text-xl sm:text-2xl md:text-3xl font-black">
+            big vision
+          </span>{" "}
+          is to build a tool that allows someone to get a university-level
+          education <span className="underline">completely for free</span> from
+          the comfort of their own home.
           <br />
           <br />
           currently, we curate online learning paths for you to find your career
@@ -35,9 +38,9 @@ const PathFinderSection = () => {
           resources. we work with employers to develop these curriculums and
           help you get hired once you're done!
         </p>
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center xl:mt-12 2xl:mt-20 my-12 md:pr-8 xs:mb-8">
           <button
-            className="px-8 py-4 text-black rounded-full text-lg font-semibold"
+            className="px-8 py-4 text-black rounded-full sm:text-lg font-semibold"
             style={{ backgroundColor: "#BFA98F" }}
           >
             <a className="text-black" href="https://thepathfinderproject.co.uk">

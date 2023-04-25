@@ -6,24 +6,30 @@ import Mail from "../../assets/icons/Mail.png";
 const Footer = () => {
   return (
     <footer
-      className="relative flex flex-wrap items-center mt-[6%] py-[4%]"
+      className="relative flex flex-wrap items-center mt-[6%] md:py-4 py-[4%] lg:py-8 xl:px-32"
       style={{ backgroundColor: "#E7DFD5" }}
     >
-      <div className="w-full md:w-2/3 px-4 md:pl-16" id="contact-section">
+      <div
+        className="w-full md:w-1/2 xl:w-2/3 px-4 lg:px-8 xl:px-0"
+        id="contact-section"
+      >
         <h2
-          className="text-4xl md:text-8xl mb-16 md:pl-16 leading-loose underline"
+          className="text-4xl md:text-6xl xl:text-8xl mb-4 md:mt-4 md:mb-16 xl:ml-0 leading-loose underline"
           style={{ color: "#121113" }}
         >
           contact
         </h2>
-        <p className="text-2xl md:pl-16" style={{ color: "#121113" }}>
+        <p
+          className="sm:text-xl md:text-2xl xl:pl-0 mb-8 xl:pr-12"
+          style={{ color: "#121113" }}
+        >
           feel free to contact me using any of the socials on the right! i’m
           particularly interested in talking to people education, healthcare,
           ai, bci + looking into the history of movements.
         </p>
       </div>
       <div
-        className="w-full md:w-1/3 px-4 md:pl-16 md:h-[50px] flex items-end md:border-t-0"
+        className="w-full md:w-1/2 xl:w-1/3 px-4 md:pt-20 lg:pt-24 md:pl-8 lg:pl-16 md:h-[50px] flex md:items-end md:pr-8 md:border-t-0 md:justify-end"
         style={{ borderColor: "#121113" }}
       >
         <ul className="flex flex-col justify-center h-full text-[#121113]">
@@ -32,10 +38,14 @@ const Footer = () => {
               href="https://www.linkedin.com/in/amaankahmad"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-2xl"
+              className="flex items-center sm:text-xl md:text-2xl"
               style={{ color: "#121113" }}
             >
-              <img src={LinkedIn} alt="linkedin" className="h-8 w-8 mr-4" />{" "}
+              <img
+                src={LinkedIn}
+                alt="linkedin"
+                className="md:h-8 md:w-8 mr-4"
+              />{" "}
               linkedin.com/in/amaankahmad
             </a>
           </li>
@@ -44,20 +54,20 @@ const Footer = () => {
               href="https://twitter.com/amaankahmad"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-2xl"
+              className="flex items-center sm:text-xl md:text-2xl"
               style={{ color: "#121113" }}
             >
-              <img src={Twitter} alt="twitter" className="h-8 w-8 mr-4" />{" "}
+              <img src={Twitter} alt="twitter" className="md:h-8 md:w-8 mr-4" />{" "}
               twitter.com/amaankahmad
             </a>
           </li>
           <li>
             <a
               href="mailto:amaankahmad@gmail.com"
-              className="flex items-center text-2xl"
+              className="flex items-center sm:text-xl md:text-2xl"
               style={{ color: "#121113" }}
             >
-              <img src={Mail} alt="email" className="h-8 w-8 mr-4" />{" "}
+              <img src={Mail} alt="email" className="md:h-8 md:w-8 mr-4" />{" "}
               amaankahmad@gmail.com
             </a>
           </li>
