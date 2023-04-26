@@ -42,10 +42,22 @@ footer {
     font-style: normal;
 }
 
-body,
+body {
+    font-family: 'Avenir Light', sans-serif;
+}
+
 html,
 a {
     font-family: 'Avenir Light', sans-serif;
+}
+
+li {
+    font-family: 'Avenir Light', sans-serif;
+}
+
+li:hover {
+    color: #121113;
+    font-weight: 700;
 }
 
 body {
@@ -58,7 +70,8 @@ body {
 }
 
 a:hover {
-    color: #fff;
+    color: #121113;
+    font-weight: 700;
 }
 
 input,
