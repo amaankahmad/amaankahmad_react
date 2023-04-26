@@ -32,7 +32,7 @@ const Footer = () => {
         className="w-full md:w-1/2 xl:w-1/3 px-4 md:pt-20 lg:pt-24 md:pl-8 lg:pl-16 md:h-[50px] flex md:items-end md:pr-8 md:border-t-0 md:justify-end"
         style={{ borderColor: "#121113" }}
       >
-        <ul className="flex flex-col justify-center h-full text-[#121113]">
+        <ul className="flex flex-col justify-center xs:pb-4 h-full text-[#121113]">
           <li className="mb-4">
             <a
               href="https://www.linkedin.com/in/amaankahmad"

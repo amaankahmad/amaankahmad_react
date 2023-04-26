@@ -10,7 +10,7 @@ const ComingSoonPage = () => {
   return (
     <RootPage header="error">
       <div className="flex flex-col items-center justify-center min-h-screen">
-        <h1 className="text-6xl md:text-8xl font-bold mb-6">
+        <h1 className="xs:text-5xl text-6xl md:text-8xl font-bold mb-6 flex items-center text-center">
           still under development
         </h1>
         <button

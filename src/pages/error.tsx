@@ -9,7 +9,7 @@ const ErrorPage = () => {
   return (
     <RootPage header="error">
       <div className="flex flex-col items-center justify-center min-h-screen px-[10%]">
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 ">
+        <h1 className="text-6xl md:text-8xl font-bold mb-6 flex items-center text-center">
           whoops, it seems you're lost
         </h1>
         <button

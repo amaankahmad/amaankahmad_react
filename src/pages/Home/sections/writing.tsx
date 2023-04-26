@@ -12,8 +12,8 @@ const WritingSection = () => {
         <p className="sm:text-xl md:text-2xl xl:ml-16 leading-relaxed">
           as you can probably see from my (very colour coded) library, i love to
           read across a range of things! <br />
-          <br />i find it useful to write up notes from interesting things ive
-          read or just conversations / thoughts ive had so that i can revisit
+          <br />i find it useful to write up notes from interesting things i've
+          read or just conversations / thoughts i've had so that i can revisit
           them.
         </p>
         <div className="flex justify-center my-12 md:pr-8">
