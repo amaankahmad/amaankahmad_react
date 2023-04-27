@@ -5,7 +5,7 @@ import Me from "../../../assets/me.png";
 const HeroSection = () => {
   return (
     <RightContentBlock imageSrc={Me} title=" ">
-      <h1 className="my-6 md:ml-6 sm:my-12 md:mt-4 md:mb-10 text-4xl sm:text-6xl xl:text-8xl xl:mb-16 xl:mr-16 leading-loose">
+      <h1 className="my-6 md:ml-6 sm:my-12 md:mt-4 md:mb-10 text-4xl sm:text-6xl xl:text-8xl xl:mb-16 xl:mr-16 xs:leading-normal md:leading-loose">
         building towards a future of{" "}
         <span className="underline">equal opportunity</span>
       </h1>

@@ -24,8 +24,8 @@ const Footer = () => {
           style={{ color: "#121113" }}
         >
           feel free to contact me using any of the socials on the right! i’m
-          particularly interested in talking to people education, healthcare,
-          ai, bci + looking into the history of movements.
+          particularly interested in talking to people about education,
+          healthcare, ai, bci + looking into the history of movements.
         </p>
       </div>
       <div
